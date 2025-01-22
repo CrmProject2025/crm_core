@@ -1,48 +1,50 @@
-// package com.crm.tehnomer.controllers;
+package com.crm.tehnomer.controllers;
 
-// @RestController
-// public class ClientController {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-//     private StudentRepository studentRepository;
+import com.crm.tehnomer.services.EmailService;
 
-//     private AchievementRepository achievementRepository;
+@RestController
+public class ClientController {
+    @Autowired
+    private EmailService emailService;
 
-//     public StudentController(StudentRepository studentRepository,
-//             AchievementRepository achievementRepository) {
-//         this.studentRepository = studentRepository;
-//         this.achievementRepository = achievementRepository;
-//     }
+    // private StudentRepository studentRepository;
 
-//     @GetMapping("/student")
-//     public String getMethodName() {
-//         List<Student> list = studentRepository.findAll();
-//         for (Student student : list) {
-//             System.out.println(student);
-//             System.out.println(student.getId());
-//             System.out.println(student.getName());
-//             System.out.println(student.getAchievements());
-//             System.out.println("###############");
+    // private AchievementRepository achievementRepository;
 
-//         }
-//         // studentRepository.deleteById(list.getFirst().getId());
+    public ClientController() {
 
-//         return "123";
-//     }
+    }
 
-//     @GetMapping("/achievements")
-//     public String getMethodName2() {
-//         List<Achievement> list = achievementRepository.findAll();
-//         for (Achievement achievement : list) {
-//             System.out.println(achievement.getId());
-//             System.out.println(achievement.getStudents());
-//             System.out.println(achievement);
-//             System.out.println("###############");
+    @GetMapping("/student")
+    public String getMethodName() {
+        System.out.println("###############");
 
-//         }
-//         return "123";
-//     }
+        emailService.sendSimpleEmail("potsanovik@mail.ru", "Тема письма", "Текст письма");
 
+        System.out.println("###############");
+        return "asd111";
 
+    }
+    // // studentRepository.deleteById(list.getFirst().getId());
 
-// }
+    // return "123";
+    // }
 
+    // @GetMapping("/achievements")
+    // public String getMethodName2() {
+    // List<Achievement> list = achievementRepository.findAll();
+    // for (Achievement achievement : list) {
+    // System.out.println(achievement.getId());
+    // System.out.println(achievement.getStudents());
+    // System.out.println(achievement);
+    // System.out.println("###############");
+
+    // }
+    // return "123";
+    // }
+
+}

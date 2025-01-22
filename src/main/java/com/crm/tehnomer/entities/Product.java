@@ -1,13 +1,17 @@
 package com.crm.tehnomer.entities;
 
-import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,8 +19,8 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "client")
-public class Client {
+@Table(name = "product")
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,37 +29,25 @@ public class Client {
     @Column(length = 255, nullable = false)
     private String name;
 
-    @Column(length = 255, nullable = false)
-    private String type;
+    @Column(length = 255)
+    private String model;
 
-    @Column(length = 255, nullable = false)
-    private String email;
+    @Column(length = 255)
+    private String description;
 
-    private int phone;
+    private int price;
 
-    @PrePersist
-    private void init() {
-        dateRegister = LocalDateTime.now();
-        dateLastEnter = LocalDateTime.now();
-    }
+    private int guarantee;
 
-    @Column(name = "date_register", nullable = false)
-    private LocalDateTime dateRegister;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "sale_id")
+    private Sale sale;
 
-    @Column(nullable = false)
-    private LocalDateTime dateLastEnter;
-
-    @Column(nullable = false)
-    private boolean active;
-
-    public Client(String name, String type, String email) {
+    public Product(String name) {
         this.name = name;
-        this.type = type;
-        this.email = email;
     }
 
-    public Client() {
-
+    public Product() {
     }
 
     @Override
@@ -74,7 +66,7 @@ public class Client {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Client other = (Client) obj;
+        Product other = (Product) obj;
         if (id != other.id)
             return false;
         return true;
@@ -82,7 +74,7 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client [id=" + id + ", name=" + name + ", type=" + type + ", email=" + email + ", phone=" + phone + "]";
+        return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
     }
 
 }
