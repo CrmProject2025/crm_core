@@ -31,15 +31,23 @@ CREATE TABLE sale (
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY NOT NULL,
-    username VARCHAR(255),
+    username VARCHAR(255) NOT NULL UNIQUE,
+    email VARCHAR(255),
     name VARCHAR(255),
     surname VARCHAR(255),
-    email VARCHAR(255),
-    password VARCHAR(1500),
-    role VARCHAR(255),
+    type VARCHAR(255),
+    password VARCHAR(1500) NOT NULL,
     information VARCHAR(255),
     phone INT,
-    dateJoined TIMESTAMP NOT NULL,
-    dateLastEnter TIMESTAMP NOT NULL,
+    date_joined TIMESTAMP NOT NULL,
+    date_last_enter TIMESTAMP NOT NULL,
     active BOOLEAN NOT NULL
 );
+
+CREATE TABLE users_role (
+    id SERIAL PRIMARY KEY NOT NULL,
+    roles VARCHAR(255),
+    user_id BIGINT,
+    constraint foreign_key_user_id FOREIGN KEY (user_id) REFERENCES users (id)
+);
+

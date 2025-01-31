@@ -1,34 +1,146 @@
-// package com.crm.tehnomer.entities;
+package com.crm.tehnomer.entities;
 
-// import jakarta.persistence.Column;
-// import jakarta.persistence.Entity;
-// import jakarta.persistence.GeneratedValue;
-// import jakarta.persistence.GenerationType;
-// import jakarta.persistence.Id;
-// import jakarta.persistence.Table;
-// import lombok.Getter;
-// import lombok.Setter;
+import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
-// @Entity
-// @Getter
-// @Setter
-// @Table(name = "users")
-// public class User {
+import com.crm.tehnomer.entities.enums.Role;
 
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
-//     @Id
-//     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//     private long id;
+@Entity
+@Getter
+@Setter
+@Table(name = "users")
+public class User implements UserDetails {
 
-//     @Column(length = 255, nullable = false)
-//     private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-//     @Column(length = 255, nullable = false)
-//     private String type;
+    @Column(length = 30, unique = true, nullable = false)
+    private String username;
 
-//     @Column(length = 255, nullable = false)
-//     private String email;
+    @Column(length = 255)
+    private String name;
 
-//     private int phone;
-// }
+    @Column(length = 255)
+    private String surname;
+
+    @Column(length = 255)
+    private String type;
+
+    @Column(length = 255, unique = true)
+    private String email;
+
+    @Column(length = 1500, nullable = false)
+    private String password;
+
+    @Column(length = 255)
+    private String information;
+
+    @Column(nullable = false)
+    private LocalDateTime dateJoined;
+
+    @Column(nullable = false)
+    private LocalDateTime dateLastEnter;
+
+    @Column(nullable = false)
+    private boolean active;
+
+    private int phone;
+
+    // здесь старший продажник и младший
+    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+    @CollectionTable(name = "users_role", joinColumns = @JoinColumn(name = "user_id"))
+    @Enumerated(EnumType.STRING)
+    private Set<Role> roles = new HashSet<>();
+
+    @PrePersist
+    private void init() {
+        dateJoined = LocalDateTime.now();
+        dateLastEnter = LocalDateTime.now();
+
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return getRoles();
+
+    }
+
+    public User(String username, String password, Role role) {
+        this.username = username;
+        this.password = password;
+        this.roles.add(role);
+    }
+
+    public User() {
+
+    }
+
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return active;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof User user))
+            return false;
+        return id == user.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                '}';
+    }
+
+}

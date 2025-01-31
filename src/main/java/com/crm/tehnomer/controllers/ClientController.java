@@ -8,12 +8,6 @@ import com.crm.tehnomer.services.EmailService;
 
 @RestController
 public class ClientController {
-    @Autowired
-    private EmailService emailService;
-
-    // private StudentRepository studentRepository;
-
-    // private AchievementRepository achievementRepository;
 
     public ClientController() {
 
@@ -23,7 +17,17 @@ public class ClientController {
     public String getMethodName() {
         System.out.println("###############");
 
-        emailService.sendSimpleEmail("potsanovik@mail.ru", "Тема письма", "Текст письма");
+        // короче, тут через кафку надо рассылать
+        // emailService.sendSimpleEmail("potsanovik@mail.ru", "Тема письма", "Текст письма");
+
+        System.out.println("###############");
+        return "asd111";
+
+    }
+
+    @GetMapping("/student2")
+    public String getMethodName2() {
+        System.out.println("###############");
 
         System.out.println("###############");
         return "asd111";
