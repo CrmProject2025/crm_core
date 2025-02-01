@@ -1,13 +1,3 @@
-create TABLE client (
-    id SERIAL PRIMARY KEY NOT NULL,
-    name VARCHAR(255),
-    type VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    phone INT,
-    date_register TIMESTAMP NOT NULL,
-    dateLastEnter TIMESTAMP NOT NULL,
-    active BOOLEAN NOT NULL
-);
 
 CREATE TABLE product (
     id SERIAL PRIMARY KEY NOT NULL,
@@ -16,17 +6,6 @@ CREATE TABLE product (
     description VARCHAR(255),
     price INT,
     guarantee INT
-);
-
-CREATE TABLE sale (
-    id SERIAL PRIMARY KEY NOT NULL,
-    date_sale TIMESTAMP NOT NULL,
-    count INT,
-    sum INT,
-    client_id BIGINT,
-    product_id BIGINT,
-    constraint foreign_key_client_id FOREIGN KEY (client_id) REFERENCES client (id),
-    constraint foreign_key_product_id FOREIGN KEY (product_id) REFERENCES product (id)
 );
 
 CREATE TABLE users (
@@ -42,6 +21,17 @@ CREATE TABLE users (
     date_joined TIMESTAMP NOT NULL,
     date_last_enter TIMESTAMP NOT NULL,
     active BOOLEAN NOT NULL
+);
+
+CREATE TABLE sale (
+    id SERIAL PRIMARY KEY NOT NULL,
+    date_sale TIMESTAMP NOT NULL,
+    count INT,
+    sum INT,
+    user_id BIGINT,
+    product_id BIGINT,
+    constraint foreign_key_user_id FOREIGN KEY (user_id) REFERENCES users (id),
+    constraint foreign_key_product_id FOREIGN KEY (product_id) REFERENCES product (id)
 );
 
 CREATE TABLE users_role (
