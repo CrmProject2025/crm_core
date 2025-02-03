@@ -1,9 +1,5 @@
 package com.crm.tehnomer.entities;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -20,39 +16,32 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "product")
-public class Product {
+@Table(name = "stock")
+public class Stock {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(length = 255, nullable = false)
-    private String name;
-
-    @Column(length = 255)
-    private String model;
-
-    @Column(length = 1000)
-    private String description;
-
-    @Column(precision = 10, scale = 2, nullable = false)
-    private BigDecimal price;
-
-    private int guarantee;
-
     @Column(nullable = false)
-    private boolean deprecated;
+    private int quantity;
 
-    // @ManyToOne(fetch = FetchType.LAZY)
-    // @JoinColumn(name = "sale_id")
-    // private Sale sale;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "warehouse_id")
+    private Warehouse warehouse;
 
-    public Product(String name) {
-        this.name = name;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "product_id")
+    private Product product;
+
+    public Stock(long id, int quantity, Warehouse warehouse, Product product) {
+        this.id = id;
+        this.quantity = quantity;
+        this.warehouse = warehouse;
+        this.product = product;
     }
 
-    public Product() {
+    public Stock() {
     }
 
     @Override
@@ -71,7 +60,7 @@ public class Product {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Product other = (Product) obj;
+        Stock other = (Stock) obj;
         if (id != other.id)
             return false;
         return true;
@@ -79,7 +68,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
+        return "Stock [id=" + id + ", quantity=" + quantity + ", warehouse=" + warehouse + ", product=" + product + "]";
     }
 
 }
