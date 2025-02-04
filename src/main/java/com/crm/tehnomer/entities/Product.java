@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -13,6 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -44,9 +46,19 @@ public class Product {
     @Column(nullable = false)
     private boolean deprecated;
 
-    // @ManyToOne(fetch = FetchType.LAZY)
-    // @JoinColumn(name = "sale_id")
-    // private Sale sale;
+    // в mappedBy ссылка на поле product в таблице Stock
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE,
+     orphanRemoval = true, mappedBy = "product")
+    private List<Stock> stocks;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE,
+     orphanRemoval = true, mappedBy = "product")
+    private List<Meter> meters;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE,
+     orphanRemoval = true, mappedBy = "product")
+    private List<OrderProduct> orderProducts;
+
 
     public Product(String name) {
         this.name = name;

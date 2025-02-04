@@ -26,7 +26,7 @@ public class UserService {
 
         User user = new User(signUpDto.getUsername(),
                 passwordEncoder.encode(signUpDto.getPassword()),
-                Role.ROLE_USER);
+                Role.CLIENT_ROLE);
         user.setActive(true);
 
         userRepository.save(user);

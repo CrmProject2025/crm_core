@@ -1,45 +1,51 @@
 package com.crm.tehnomer.entities;
 
-import java.util.List;
+import java.math.BigDecimal;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Entity
 @Getter
 @Setter
-@Table(name = "warehouse")
-public class Warehouse {
+@Table(name = "order_product")
+public class OrderProduct {
 
-     @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(length = 255)
-    private String address;
+    @Column(nullable = false)
+    private int count;
 
-    @Column(length = 255, nullable = false)
-    private String name;
+    @Column(precision = 10, scale = 2, nullable = false)
+    private BigDecimal price;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE,
-    orphanRemoval = true, mappedBy = "warehouse")
-    private List<Stock> stocks;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "order_id")
+    private Order order;
 
-    public Warehouse(String name) {
-        this.name = name;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "product_id")
+    private Product product;
+
+    public OrderProduct(int count, BigDecimal price, Order order, Product product) {
+        this.count = count;
+        this.price = price;
+        this.order = order;
+        this.product = product;
     }
 
-    public Warehouse() {
+    public OrderProduct() {
     }
 
     @Override
@@ -58,7 +64,7 @@ public class Warehouse {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Warehouse other = (Warehouse) obj;
+        OrderProduct other = (OrderProduct) obj;
         if (id != other.id)
             return false;
         return true;
@@ -66,9 +72,8 @@ public class Warehouse {
 
     @Override
     public String toString() {
-        return "Warehouse [id=" + id + ", address=" + address + ", name=" + name + "]";
+        return "OrderProduct [id=" + id + ", count=" + count + ", price=" + price + ", order=" + order + ", product="
+                + product + "]";
     }
 
-    
-    
 }

@@ -1,0 +1,13 @@
+package com.crm.tehnomer.entities.enums;
+
+public enum OrderStatus {
+    REQUEST_STATUS,
+    PROCESSING_BY_THE_SELLER_STATUS,
+    PAYMENT_STATUS,
+    COLLECT_THE_ORDER_STATUS,
+    DELIVERY_STATUS,
+    ISNTALLATION_STATUS,
+    CANCELED_STATUS,
+    RETURN_STATUS
+
+}

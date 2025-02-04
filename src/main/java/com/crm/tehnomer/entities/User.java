@@ -3,6 +3,7 @@ package com.crm.tehnomer.entities;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -11,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.crm.tehnomer.entities.enums.Role;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
@@ -22,6 +24,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import lombok.Getter;
@@ -74,6 +77,22 @@ public class User implements UserDetails {
     @CollectionTable(name = "users_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles = new HashSet<>();
+
+    @OneToMany(fetch=FetchType.LAZY,cascade=CascadeType.REMOVE,
+    orphanRemoval=true, mappedBy="client")
+    private List<Order> clientOrders;
+
+    @OneToMany(fetch=FetchType.LAZY,cascade=CascadeType.REMOVE,
+    orphanRemoval=true, mappedBy="saler")
+    private List<Order> salerOrders;
+
+    @OneToMany(fetch=FetchType.LAZY,cascade=CascadeType.REMOVE,
+    orphanRemoval=true, mappedBy="client")
+    private List<Meter> clientMeters;
+
+    @OneToMany(fetch=FetchType.LAZY,cascade=CascadeType.REMOVE,
+    orphanRemoval=true, mappedBy="installer")
+    private List<Meter> installerMeters;
 
     @PrePersist
     private void init() {

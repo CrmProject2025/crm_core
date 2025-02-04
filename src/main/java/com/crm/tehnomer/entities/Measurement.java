@@ -1,45 +1,45 @@
 package com.crm.tehnomer.entities;
 
-import java.util.List;
+import java.time.LocalDateTime;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Entity
 @Getter
 @Setter
-@Table(name = "warehouse")
-public class Warehouse {
+@Table(name = "measurement")
+public class Measurement {
 
-     @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(length = 255)
-    private String address;
+    private int value;
 
-    @Column(length = 255, nullable = false)
-    private String name;
+    // приходит с другого сервера
+    @Column(nullable = false)
+    private LocalDateTime measurementDate;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE,
-    orphanRemoval = true, mappedBy = "warehouse")
-    private List<Stock> stocks;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "meter_id")
+    private Meter meter;
 
-    public Warehouse(String name) {
-        this.name = name;
+    public Measurement(int value, LocalDateTime measurementDate) {
+        this.value = value;
+        this.measurementDate = measurementDate;
     }
 
-    public Warehouse() {
+    public Measurement() {
     }
 
     @Override
@@ -58,7 +58,7 @@ public class Warehouse {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Warehouse other = (Warehouse) obj;
+        Measurement other = (Measurement) obj;
         if (id != other.id)
             return false;
         return true;
@@ -66,9 +66,11 @@ public class Warehouse {
 
     @Override
     public String toString() {
-        return "Warehouse [id=" + id + ", address=" + address + ", name=" + name + "]";
+        return "Measurement [id=" + id + ", value=" + value + ", measurementDate=" + measurementDate + ", meter="
+                + meter + "]";
     }
 
-    
+
+
     
 }
