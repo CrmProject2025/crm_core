@@ -5,7 +5,7 @@ import com.crm.tehnomer.dtos.user.SignInDto;
 import com.crm.tehnomer.dtos.user.SignUpDto;
 import com.crm.tehnomer.entities.User;
 import com.crm.tehnomer.repositories.UserRepository;
-import com.crm.tehnomer.services.UserService;
+import com.crm.tehnomer.services.userService.UserService;
 import com.crm.tehnomer.settings.security.JwtUserDetailsService;
 import com.crm.tehnomer.settings.security.jwt.JwtRequest;
 import com.crm.tehnomer.settings.security.jwt.JwtResponse;
