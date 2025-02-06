@@ -1,5 +1,6 @@
 package com.crm.tehnomer.dtos.order;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NonNull;
@@ -14,6 +15,7 @@ public class OrderCreateByClientDto {
     private String address;
 
     @NotNull
+    @Email(message = "Некорректный email")
     private String email;
 
     @NotNull

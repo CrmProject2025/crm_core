@@ -14,8 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.crm.tehnomer.dtos.ResponseDto;
 import com.crm.tehnomer.dtos.order.OrderCreateByClientDto;
+import com.crm.tehnomer.dtos.order.OrderGetDto;
+import com.crm.tehnomer.dtos.order.TakeRequestedOrderBySalerDto;
 import com.crm.tehnomer.entities.Order;
 import com.crm.tehnomer.entities.User;
+import com.crm.tehnomer.entities.enums.OrderStatus;
 import com.crm.tehnomer.repositories.OrderRepository;
 import com.crm.tehnomer.repositories.UserRepository;
 import com.crm.tehnomer.services.orderService.OrderService;
@@ -26,6 +29,8 @@ import com.crm.tehnomer.settings.security.JwtUserDetailsService;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -59,25 +64,30 @@ public class OrderController {
      * @return message
      */
     @GetMapping("")
-    public ResponseEntity<ResponseDto> getRequestedOrders(
-        @RequestParam(defaultValue = "0") int page,
-        @RequestParam(defaultValue = "10") int size) {
-        
-        Page<Order> orders = orderService.listOrders(page, size);
-        // System.out.println(orders.getContent());
-        // сделать dto для возвращаемых заказов
-        // почекать в gpt
-        return ResponseEntity.ok(ResponseDto.toDto();
+    public Page<OrderGetDto> getRequestedOrders(
+            @RequestParam(defaultValue = "REQUEST_STATUS") OrderStatus status,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
+
+        Page<Order> orders = orderService.listOrders(status, page, size);
+        return OrderGetDto.toPageOrders(orders);
     }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<ResponseDto> takeRequestedOrderBySaler(@PathVariable("id") Long id,
+            @Validated @RequestBody TakeRequestedOrderBySalerDto takeRequestedOrderBySalerDto,
+            Authentication auth) {
+        User currentUser = userRepository.findByUsername(auth.getName());
+        orderService.editOrderStatus(id, takeRequestedOrderBySalerDto, currentUser);
+
+        return ResponseEntity.ok(ResponseDto.toDto("Request status changed to PROCESSING_BY_THE_SELLER_STATUS"));
+    }
+    // 1  переписать обработку ошибок с gpt, нихрена не работает
 
     // createOrderBySaler
 
-    // надо сюда емайл добавить, но не авторизировать его, только регать и цеплять
-    // заказ к клиенту а потом счетчики
 
-    // взять заказ (saler) меняем статус
-    // показать все заказы в статусе request
-    // изменить заказ, добавить новые позиции(по гайду в миро) это в другом
+    // 2 изменить заказ, добавить новые позиции(по гайду в миро) это в другом
     // контроллере(order_product)
 
 }

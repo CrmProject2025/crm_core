@@ -27,6 +27,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -52,7 +53,8 @@ public class User implements UserDetails {
     @Column(length = 255)
     private String type;
 
-    @Column(length = 255, unique = true)
+    @Email
+    @Column(length = 255, unique = true, nullable = false)
     private String email;
 
     @Column(length = 1500, nullable = false)

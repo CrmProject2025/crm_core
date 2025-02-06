@@ -13,11 +13,12 @@ import lombok.ToString;
 @ToString
 @Getter
 @Setter
-@AllArgsConstructor
+// @AllArgsConstructor
 public class CustomException extends RuntimeException {
 
     public CustomException(HttpStatus httpStatus, String message) {
     }
-    private final HttpStatus httpStatus = null;
-    private final String message = null;
+
+    private HttpStatus httpStatus = null;
+    private String message = null;
 }

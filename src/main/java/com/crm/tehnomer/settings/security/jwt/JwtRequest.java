@@ -1,5 +1,6 @@
 package com.crm.tehnomer.settings.security.jwt;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,7 +19,8 @@ import java.io.Serializable;
 public class JwtRequest implements Serializable {
 
     @NotNull
-    private String username;
+    @Email(message = "Некорректный email")
+    private String email;
 
     @NotNull
     private String password;

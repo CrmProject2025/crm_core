@@ -35,6 +35,8 @@ public class UserServiceImpl implements UserService {
         User user = new User(usernameEmail,
                 passwordEncoder.encode(PasswordGenerator.generatePassword(12)),
                 Role.CLIENT_ROLE);
+        user.setEmail(orderCreateByClientDto.getEmail());
+        user.setInformation(orderCreateByClientDto.getInfo());
         user.setActive(true);
         user.setPhone(orderCreateByClientDto.getPhone());
 
@@ -44,13 +46,18 @@ public class UserServiceImpl implements UserService {
 
     public void createUser(SignUpDto signUpDto) {
 
-        if (userRepository.existsByUsername(signUpDto.getUsername())) {
+        String usernameEmail = signUpDto.getEmail();
+
+        if (userRepository.existsByUsername(usernameEmail)) {
             throw new CustomException(HttpStatus.BAD_REQUEST, "User already exist");
         }
 
-        User user = new User(signUpDto.getUsername(),
+        User user = new User(usernameEmail,
                 passwordEncoder.encode(signUpDto.getPassword()),
-                Role.CLIENT_ROLE);
+                Role.SALER_ROLE);
+        user.setEmail(signUpDto.getEmail());
+        user.setPhone(signUpDto.getPhone());
+
         user.setActive(true);
 
         userRepository.save(user);

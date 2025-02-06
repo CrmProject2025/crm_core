@@ -1,7 +1,6 @@
 package com.crm.tehnomer.controllers;
 
 import com.crm.tehnomer.dtos.ResponseDto;
-import com.crm.tehnomer.dtos.user.SignInDto;
 import com.crm.tehnomer.dtos.user.SignUpDto;
 import com.crm.tehnomer.entities.User;
 import com.crm.tehnomer.repositories.UserRepository;
@@ -31,7 +30,7 @@ public class UserLoginController {
     private JwtUserDetailsService jwtUserDetailsService;
 
     @PostMapping("/signup")
-    public ResponseEntity<?> registerUser(@RequestBody SignUpDto signUpDto) {
+    public ResponseEntity<?> registerUser(@Validated @RequestBody SignUpDto signUpDto) {
         userService.createUser(signUpDto);
         return ResponseEntity.ok(ResponseDto.toDto("User registered successfully"));
     }
@@ -39,12 +38,12 @@ public class UserLoginController {
     @PostMapping("/signin")
     public ResponseEntity<?> loginUser(@Validated @RequestBody JwtRequest authenticationRequest) throws Exception {
 
-        authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
+        authenticate(authenticationRequest.getEmail(), authenticationRequest.getPassword());
 
         final UserDetails userDetails = jwtUserDetailsService
-                .loadUserByUsername(authenticationRequest.getUsername());
+                .loadUserByUsername(authenticationRequest.getEmail());
 
-        final String token = jwtTokenUtil.generateToken(authenticationRequest.getUsername());
+        final String token = jwtTokenUtil.generateToken(authenticationRequest.getEmail());
 
         return ResponseEntity.ok(new JwtResponse(token));
     }

@@ -1,5 +1,6 @@
 package com.crm.tehnomer.dtos.user;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +10,10 @@ import lombok.Setter;
 public class SignUpDto {
 
     @NotNull
-    private String username;
+    @Email(message = "Некорректный email")
+    private String email;
+
+    private int phone;
 
     @NotNull
     private String password;
