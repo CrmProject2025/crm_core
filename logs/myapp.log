@@ -1,167 +1,167 @@
-2025-02-09T09:18:37.588+03:00  INFO 88325 --- [tehnomer] [main] com.crm.tehnomer.TehnomerApplication     : Starting TehnomerApplication using Java 21.0.5 with PID 88325 (/home/tework/projects/JavaProjects/tehnomer/target/classes started by tework in /home/tework/projects/JavaProjects/tehnomer)
-2025-02-09T09:18:37.593+03:00  INFO 88325 --- [tehnomer] [main] com.crm.tehnomer.TehnomerApplication     : No active profile set, falling back to 1 default profile: "default"
-2025-02-09T09:18:40.644+03:00  INFO 88325 --- [tehnomer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-09T09:18:40.804+03:00  INFO 88325 --- [tehnomer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 3 JPA repository interfaces.
-2025-02-09T09:18:42.725+03:00  INFO 88325 --- [tehnomer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-09T09:18:42.757+03:00  INFO 88325 --- [tehnomer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-09T09:18:42.758+03:00  INFO 88325 --- [tehnomer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
-2025-02-09T09:18:42.901+03:00  INFO 88325 --- [tehnomer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-09T09:18:42.902+03:00  INFO 88325 --- [tehnomer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5181 ms
-2025-02-09T09:18:43.632+03:00  INFO 88325 --- [tehnomer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-09T09:18:44.389+03:00  INFO 88325 --- [tehnomer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@ff2266c
-2025-02-09T09:18:44.392+03:00  INFO 88325 --- [tehnomer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-09T09:18:44.735+03:00  INFO 88325 --- [tehnomer] [main] liquibase.database                       : Set default schema name to public
-2025-02-09T09:18:45.430+03:00  INFO 88325 --- [tehnomer] [main] liquibase.changelog                      : Reading from public.databasechangelog
-2025-02-09T09:18:45.572+03:00  INFO 88325 --- [tehnomer] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2025-02-09T09:18:45.578+03:00  INFO 88325 --- [tehnomer] [main] liquibase.changelog                      : Reading from public.databasechangelog
-2025-02-09T09:18:45.596+03:00  INFO 88325 --- [tehnomer] [main] liquibase.util                           : UPDATE SUMMARY
-2025-02-09T09:18:45.597+03:00  INFO 88325 --- [tehnomer] [main] liquibase.util                           : Run:                          0
-2025-02-09T09:18:45.598+03:00  INFO 88325 --- [tehnomer] [main] liquibase.util                           : Previously run:               1
-2025-02-09T09:18:45.599+03:00  INFO 88325 --- [tehnomer] [main] liquibase.util                           : Filtered out:                 0
-2025-02-09T09:18:45.599+03:00  INFO 88325 --- [tehnomer] [main] liquibase.util                           : -------------------------------
-2025-02-09T09:18:45.599+03:00  INFO 88325 --- [tehnomer] [main] liquibase.util                           : Total change sets:            1
-2025-02-09T09:18:45.601+03:00  INFO 88325 --- [tehnomer] [main] liquibase.util                           : Update summary generated
-2025-02-09T09:18:45.604+03:00  INFO 88325 --- [tehnomer] [main] liquibase.command                        : Command execution complete
-2025-02-09T09:18:46.240+03:00  INFO 88325 --- [tehnomer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-09T09:18:46.352+03:00  INFO 88325 --- [tehnomer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
-2025-02-09T09:18:46.424+03:00  INFO 88325 --- [tehnomer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-02-09T09:18:46.586+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@2560a7be
-2025-02-09T09:18:46.587+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@2560a7be
-2025-02-09T09:18:46.587+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@2560a7be
-2025-02-09T09:18:46.588+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@fabfc79
-2025-02-09T09:18:46.588+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@fabfc79
-2025-02-09T09:18:46.589+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@59aa2fba
-2025-02-09T09:18:46.589+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@59aa2fba
-2025-02-09T09:18:46.590+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@578d5d02
-2025-02-09T09:18:46.590+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@578d5d02
-2025-02-09T09:18:46.591+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@77f04d1a
-2025-02-09T09:18:46.591+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@77f04d1a
-2025-02-09T09:18:46.591+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@77f04d1a
-2025-02-09T09:18:46.592+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@27682fa9
-2025-02-09T09:18:46.593+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@27682fa9
-2025-02-09T09:18:46.593+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@27682fa9
-2025-02-09T09:18:46.594+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@2fb70301
-2025-02-09T09:18:46.595+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@2fb70301
-2025-02-09T09:18:46.595+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@126f2eb8
-2025-02-09T09:18:46.596+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@67823972
-2025-02-09T09:18:46.597+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@67823972
-2025-02-09T09:18:46.597+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@1f1574c
-2025-02-09T09:18:46.598+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@16c9e378
-2025-02-09T09:18:46.599+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@7d3815f7
-2025-02-09T09:18:46.599+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@7d3815f7
-2025-02-09T09:18:46.600+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@7d3815f7
-2025-02-09T09:18:46.600+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@b87ea8b
-2025-02-09T09:18:46.601+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@b87ea8b
-2025-02-09T09:18:46.602+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@b87ea8b
-2025-02-09T09:18:46.603+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@c79780
-2025-02-09T09:18:46.603+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@c79780
-2025-02-09T09:18:46.604+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@c79780
-2025-02-09T09:18:46.604+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@594c66c3
-2025-02-09T09:18:46.605+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@594c66c3
-2025-02-09T09:18:46.605+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@594c66c3
-2025-02-09T09:18:46.606+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@64e657b0
-2025-02-09T09:18:46.607+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@64e657b0
-2025-02-09T09:18:46.607+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@64e657b0
-2025-02-09T09:18:46.608+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@50013a15
-2025-02-09T09:18:46.609+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@50013a15
-2025-02-09T09:18:46.609+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@6c46dc02
-2025-02-09T09:18:46.610+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@6c46dc02
-2025-02-09T09:18:46.611+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@5606d537
-2025-02-09T09:18:46.612+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@5606d537
-2025-02-09T09:18:46.613+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@5606d537
-2025-02-09T09:18:46.613+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@b5390
-2025-02-09T09:18:46.614+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@59831016
-2025-02-09T09:18:46.614+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@59831016
-2025-02-09T09:18:46.615+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@37f71e8
-2025-02-09T09:18:46.615+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@63b0b3dd
-2025-02-09T09:18:46.616+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@63b0b3dd
-2025-02-09T09:18:46.616+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@63b0b3dd
-2025-02-09T09:18:46.617+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@397dfbe8
-2025-02-09T09:18:46.618+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@783f5f71
-2025-02-09T09:18:46.619+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@3791af
-2025-02-09T09:18:46.619+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@66fff42f
-2025-02-09T09:18:46.620+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@66fff42f
-2025-02-09T09:18:46.620+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@308be1a3
-2025-02-09T09:18:46.621+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@308be1a3
-2025-02-09T09:18:46.622+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@32cde414
-2025-02-09T09:18:46.622+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@e4bb10b
-2025-02-09T09:18:46.623+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@178c6261
-2025-02-09T09:18:46.623+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@78e50fca
-2025-02-09T09:18:46.624+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@2555a986
-2025-02-09T09:18:46.625+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@76c587ce
-2025-02-09T09:18:46.625+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@2ae7c1d
-2025-02-09T09:18:46.626+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@2ae7c1d
-2025-02-09T09:18:46.626+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@5265a8dd
-2025-02-09T09:18:46.627+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@5265a8dd
-2025-02-09T09:18:46.628+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@5af4328e
-2025-02-09T09:18:46.628+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@5af4328e
-2025-02-09T09:18:46.629+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@5535e9
-2025-02-09T09:18:46.629+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@5535e9
-2025-02-09T09:18:46.630+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@71eaef6a
-2025-02-09T09:18:46.630+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@71eaef6a
-2025-02-09T09:18:46.631+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@e3692ca
-2025-02-09T09:18:46.631+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@75adb1c0
-2025-02-09T09:18:46.632+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@5cfe28e1
-2025-02-09T09:18:46.633+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@5cfe28e1
-2025-02-09T09:18:46.633+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@7ac90dab
-2025-02-09T09:18:46.634+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@40d370fa
-2025-02-09T09:18:46.634+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@5868ea91
-2025-02-09T09:18:46.635+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@757c685d
-2025-02-09T09:18:46.635+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@757c685d
-2025-02-09T09:18:46.636+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@476a970c
-2025-02-09T09:18:46.636+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@1ce57bbb
-2025-02-09T09:18:46.637+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@34626d4
-2025-02-09T09:18:46.638+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@34626d4
-2025-02-09T09:18:46.638+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@15ee8861
-2025-02-09T09:18:46.639+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@15ee8861
-2025-02-09T09:18:46.639+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@6afaf27
-2025-02-09T09:18:46.640+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@6afaf27
-2025-02-09T09:18:46.640+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@6afaf27
-2025-02-09T09:18:46.641+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@31a024ea
-2025-02-09T09:18:46.641+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@31a024ea
-2025-02-09T09:18:46.642+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@31a024ea
-2025-02-09T09:18:46.642+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@362c48c
-2025-02-09T09:18:46.643+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@62aee901
-2025-02-09T09:18:46.644+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@1983a4e4
-2025-02-09T09:18:46.644+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@1983a4e4
-2025-02-09T09:18:46.645+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@29b4444a
-2025-02-09T09:18:46.645+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@29b4444a
-2025-02-09T09:18:46.646+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@29b4444a
-2025-02-09T09:18:46.646+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@3ce7a354
-2025-02-09T09:18:46.646+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@2914a328
-2025-02-09T09:18:46.646+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@2d34866a
-2025-02-09T09:18:46.647+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@2d34866a
-2025-02-09T09:18:46.647+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@26291192
-2025-02-09T09:18:46.648+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@26291192
-2025-02-09T09:18:46.648+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@26291192
-2025-02-09T09:18:46.648+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@27d5eb00
-2025-02-09T09:18:46.649+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@27d5eb00
-2025-02-09T09:18:46.649+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@2b540131
-2025-02-09T09:18:46.649+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@2b540131
-2025-02-09T09:18:46.650+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@225ac5e7
-2025-02-09T09:18:46.650+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@225ac5e7
-2025-02-09T09:18:46.651+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@4c91f5bf
-2025-02-09T09:18:46.651+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@4c91f5bf
-2025-02-09T09:18:46.652+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@44948ac6
-2025-02-09T09:18:46.652+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@44948ac6
-2025-02-09T09:18:46.653+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@4fc256ec
-2025-02-09T09:18:46.653+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float_vector -> org.hibernate.type.BasicTypeReference@3bc3d70e
-2025-02-09T09:18:46.653+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double_vector -> org.hibernate.type.BasicTypeReference@78bce1c4
-2025-02-09T09:18:46.654+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte_vector -> org.hibernate.type.BasicTypeReference@189e96af
-2025-02-09T09:18:46.654+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@45b6c666
-2025-02-09T09:18:46.668+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@4a18e0f1
-2025-02-09T09:18:46.669+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@4a18e0f1
-2025-02-09T09:18:46.672+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@1fa58a48
-2025-02-09T09:18:46.673+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@3921e96f
-2025-02-09T09:18:46.674+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@6fad5ace
-2025-02-09T09:18:46.674+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@632dc41
-2025-02-09T09:18:46.674+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@35f6f105
-2025-02-09T09:18:46.675+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@3aa1c45
-2025-02-09T09:18:46.675+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@6d45dd4
-2025-02-09T09:18:46.676+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@1614499b
-2025-02-09T09:18:46.677+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@1468fc85
-2025-02-09T09:18:47.146+03:00  INFO 88325 --- [tehnomer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-02-09T09:18:47.310+03:00  INFO 88325 --- [tehnomer] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-02-10T06:44:38.589+03:00  INFO 10207 --- [tehnomer] [main] com.crm.tehnomer.TehnomerApplication     : Starting TehnomerApplication using Java 21.0.6 with PID 10207 (/home/tework/projects/JavaProjects/tehnomer/target/classes started by tework in /home/tework/projects/JavaProjects/tehnomer)
+2025-02-10T06:44:38.617+03:00  INFO 10207 --- [tehnomer] [main] com.crm.tehnomer.TehnomerApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-02-10T06:44:40.367+03:00  INFO 10207 --- [tehnomer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-10T06:44:40.515+03:00  INFO 10207 --- [tehnomer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 3 JPA repository interfaces.
+2025-02-10T06:44:41.635+03:00  INFO 10207 --- [tehnomer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-10T06:44:41.656+03:00  INFO 10207 --- [tehnomer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-10T06:44:41.657+03:00  INFO 10207 --- [tehnomer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-10T06:44:41.748+03:00  INFO 10207 --- [tehnomer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-10T06:44:41.749+03:00  INFO 10207 --- [tehnomer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3039 ms
+2025-02-10T06:44:42.199+03:00  INFO 10207 --- [tehnomer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-10T06:44:42.752+03:00  INFO 10207 --- [tehnomer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4fd37449
+2025-02-10T06:44:42.755+03:00  INFO 10207 --- [tehnomer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-10T06:44:43.036+03:00  INFO 10207 --- [tehnomer] [main] liquibase.database                       : Set default schema name to public
+2025-02-10T06:44:43.539+03:00  INFO 10207 --- [tehnomer] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2025-02-10T06:44:43.644+03:00  INFO 10207 --- [tehnomer] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-02-10T06:44:43.647+03:00  INFO 10207 --- [tehnomer] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2025-02-10T06:44:43.661+03:00  INFO 10207 --- [tehnomer] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-10T06:44:43.661+03:00  INFO 10207 --- [tehnomer] [main] liquibase.util                           : Run:                          0
+2025-02-10T06:44:43.662+03:00  INFO 10207 --- [tehnomer] [main] liquibase.util                           : Previously run:               1
+2025-02-10T06:44:43.662+03:00  INFO 10207 --- [tehnomer] [main] liquibase.util                           : Filtered out:                 0
+2025-02-10T06:44:43.663+03:00  INFO 10207 --- [tehnomer] [main] liquibase.util                           : -------------------------------
+2025-02-10T06:44:43.663+03:00  INFO 10207 --- [tehnomer] [main] liquibase.util                           : Total change sets:            1
+2025-02-10T06:44:43.664+03:00  INFO 10207 --- [tehnomer] [main] liquibase.util                           : Update summary generated
+2025-02-10T06:44:43.666+03:00  INFO 10207 --- [tehnomer] [main] liquibase.command                        : Command execution complete
+2025-02-10T06:44:44.153+03:00  INFO 10207 --- [tehnomer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-10T06:44:44.251+03:00  INFO 10207 --- [tehnomer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-10T06:44:44.299+03:00  INFO 10207 --- [tehnomer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-10T06:44:44.448+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@1fa58a48
+2025-02-10T06:44:44.448+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@1fa58a48
+2025-02-10T06:44:44.449+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@1fa58a48
+2025-02-10T06:44:44.449+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@3921e96f
+2025-02-10T06:44:44.449+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@3921e96f
+2025-02-10T06:44:44.449+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@6fad5ace
+2025-02-10T06:44:44.450+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@6fad5ace
+2025-02-10T06:44:44.450+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@632dc41
+2025-02-10T06:44:44.452+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@632dc41
+2025-02-10T06:44:44.453+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@35f6f105
+2025-02-10T06:44:44.453+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@35f6f105
+2025-02-10T06:44:44.453+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@35f6f105
+2025-02-10T06:44:44.455+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@3aa1c45
+2025-02-10T06:44:44.456+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@3aa1c45
+2025-02-10T06:44:44.456+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@3aa1c45
+2025-02-10T06:44:44.456+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@6d45dd4
+2025-02-10T06:44:44.456+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@6d45dd4
+2025-02-10T06:44:44.459+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@1614499b
+2025-02-10T06:44:44.459+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@1468fc85
+2025-02-10T06:44:44.460+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@1468fc85
+2025-02-10T06:44:44.460+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@47f39279
+2025-02-10T06:44:44.460+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@63ed5dae
+2025-02-10T06:44:44.460+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@578198d9
+2025-02-10T06:44:44.460+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@578198d9
+2025-02-10T06:44:44.460+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@578198d9
+2025-02-10T06:44:44.461+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@4deca78
+2025-02-10T06:44:44.461+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@4deca78
+2025-02-10T06:44:44.461+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@4deca78
+2025-02-10T06:44:44.461+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@5f65e0c0
+2025-02-10T06:44:44.461+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@5f65e0c0
+2025-02-10T06:44:44.462+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@5f65e0c0
+2025-02-10T06:44:44.462+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@566cc6af
+2025-02-10T06:44:44.462+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@566cc6af
+2025-02-10T06:44:44.462+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@566cc6af
+2025-02-10T06:44:44.462+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@d70dbeb
+2025-02-10T06:44:44.462+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@d70dbeb
+2025-02-10T06:44:44.467+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@d70dbeb
+2025-02-10T06:44:44.467+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@7f8f5d37
+2025-02-10T06:44:44.468+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@7f8f5d37
+2025-02-10T06:44:44.468+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@f9cd1e6
+2025-02-10T06:44:44.468+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@f9cd1e6
+2025-02-10T06:44:44.468+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@3ff53704
+2025-02-10T06:44:44.469+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@3ff53704
+2025-02-10T06:44:44.469+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@3ff53704
+2025-02-10T06:44:44.469+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@34d11c92
+2025-02-10T06:44:44.469+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@31b289da
+2025-02-10T06:44:44.469+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@31b289da
+2025-02-10T06:44:44.469+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@58486deb
+2025-02-10T06:44:44.470+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@4e933cf1
+2025-02-10T06:44:44.470+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@4e933cf1
+2025-02-10T06:44:44.470+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@4e933cf1
+2025-02-10T06:44:44.475+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@729a9c3d
+2025-02-10T06:44:44.476+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@574327ed
+2025-02-10T06:44:44.476+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@4c7f2fdb
+2025-02-10T06:44:44.476+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@1b5cf611
+2025-02-10T06:44:44.476+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@1b5cf611
+2025-02-10T06:44:44.476+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@3d01ea33
+2025-02-10T06:44:44.476+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@3d01ea33
+2025-02-10T06:44:44.477+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@73b3ce31
+2025-02-10T06:44:44.477+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@4687366b
+2025-02-10T06:44:44.477+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@3a17acd4
+2025-02-10T06:44:44.477+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@8f589d7
+2025-02-10T06:44:44.477+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@65da1cbe
+2025-02-10T06:44:44.477+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@1a914a00
+2025-02-10T06:44:44.480+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@1d67348a
+2025-02-10T06:44:44.481+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@1d67348a
+2025-02-10T06:44:44.481+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@39f8adc0
+2025-02-10T06:44:44.481+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@39f8adc0
+2025-02-10T06:44:44.481+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@c7269ad
+2025-02-10T06:44:44.481+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@c7269ad
+2025-02-10T06:44:44.481+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@1c23e369
+2025-02-10T06:44:44.481+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@1c23e369
+2025-02-10T06:44:44.482+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@38445703
+2025-02-10T06:44:44.482+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@38445703
+2025-02-10T06:44:44.482+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@44ae6b66
+2025-02-10T06:44:44.482+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@5b0e5d5f
+2025-02-10T06:44:44.482+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@58b5d5fc
+2025-02-10T06:44:44.483+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@58b5d5fc
+2025-02-10T06:44:44.483+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@42536da6
+2025-02-10T06:44:44.483+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@7591cbd1
+2025-02-10T06:44:44.483+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@5cdc8499
+2025-02-10T06:44:44.483+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@2a30b0cb
+2025-02-10T06:44:44.483+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@2a30b0cb
+2025-02-10T06:44:44.484+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@73d7d676
+2025-02-10T06:44:44.484+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@8e3449e
+2025-02-10T06:44:44.485+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@3023f157
+2025-02-10T06:44:44.485+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@3023f157
+2025-02-10T06:44:44.485+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@1f3aa970
+2025-02-10T06:44:44.486+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@1f3aa970
+2025-02-10T06:44:44.486+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@5213b887
+2025-02-10T06:44:44.486+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@5213b887
+2025-02-10T06:44:44.487+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@5213b887
+2025-02-10T06:44:44.487+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@40c6d1ef
+2025-02-10T06:44:44.488+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@40c6d1ef
+2025-02-10T06:44:44.488+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@40c6d1ef
+2025-02-10T06:44:44.489+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@6f4029e9
+2025-02-10T06:44:44.489+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@257b6c58
+2025-02-10T06:44:44.489+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@6ae32ff0
+2025-02-10T06:44:44.489+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@6ae32ff0
+2025-02-10T06:44:44.490+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@1c5cd2ea
+2025-02-10T06:44:44.490+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@1c5cd2ea
+2025-02-10T06:44:44.490+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@1c5cd2ea
+2025-02-10T06:44:44.491+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@72bdbfe9
+2025-02-10T06:44:44.491+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@cda144a
+2025-02-10T06:44:44.492+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@7fb5368e
+2025-02-10T06:44:44.492+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@7fb5368e
+2025-02-10T06:44:44.492+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@5847010
+2025-02-10T06:44:44.493+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@5847010
+2025-02-10T06:44:44.493+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@5847010
+2025-02-10T06:44:44.493+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@1ad9d5be
+2025-02-10T06:44:44.494+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@1ad9d5be
+2025-02-10T06:44:44.494+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@46fdfaeb
+2025-02-10T06:44:44.494+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@46fdfaeb
+2025-02-10T06:44:44.494+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@102aa5fc
+2025-02-10T06:44:44.494+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@102aa5fc
+2025-02-10T06:44:44.495+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@36885319
+2025-02-10T06:44:44.495+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@36885319
+2025-02-10T06:44:44.495+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@62a81453
+2025-02-10T06:44:44.495+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@62a81453
+2025-02-10T06:44:44.495+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@4bab804f
+2025-02-10T06:44:44.495+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float_vector -> org.hibernate.type.BasicTypeReference@eebd983
+2025-02-10T06:44:44.496+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double_vector -> org.hibernate.type.BasicTypeReference@7a0f43dc
+2025-02-10T06:44:44.496+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte_vector -> org.hibernate.type.BasicTypeReference@58a7ca42
+2025-02-10T06:44:44.497+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@4f9980e1
+2025-02-10T06:44:44.504+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@51e0f2eb
+2025-02-10T06:44:44.505+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@51e0f2eb
+2025-02-10T06:44:44.507+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@e1fd2bf
+2025-02-10T06:44:44.508+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@70f5f57d
+2025-02-10T06:44:44.508+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@691eb389
+2025-02-10T06:44:44.508+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@301770d9
+2025-02-10T06:44:44.508+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@40edc64e
+2025-02-10T06:44:44.509+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@1fec9d33
+2025-02-10T06:44:44.509+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@372f7bc
+2025-02-10T06:44:44.509+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@8e8ceb3
+2025-02-10T06:44:44.509+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@2699b656
+2025-02-10T06:44:44.998+03:00  INFO 10207 --- [tehnomer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-10T06:44:45.090+03:00  INFO 10207 --- [tehnomer] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 16.6
@@ -169,97 +169,267 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-02-09T09:18:47.326+03:00 DEBUG 88325 --- [tehnomer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@78a34c47) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@77648321)
-2025-02-09T09:18:47.326+03:00 DEBUG 88325 --- [tehnomer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@43201f84) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2c51c756)
-2025-02-09T09:18:47.330+03:00 DEBUG 88325 --- [tehnomer] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2004, BlobTypeDescriptor(BLOB_BINDING)) replaced previous registration(BlobTypeDescriptor(DEFAULT))
-2025-02-09T09:18:47.331+03:00 DEBUG 88325 --- [tehnomer] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(CLOB_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
-2025-02-09T09:18:47.350+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration JAVA_OBJECT -> org.hibernate.type.JavaObjectType@32f54c2a
-2025-02-09T09:18:47.350+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@32f54c2a
-2025-02-09T09:18:47.351+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Type registration key [java.lang.Object] overrode previous entry : `org.hibernate.type.JavaObjectType@4a18e0f1`
-2025-02-09T09:18:47.361+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
-2025-02-09T09:18:47.362+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
-2025-02-09T09:18:47.362+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
-2025-02-09T09:18:47.369+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetDateTimeType -> basicType@2(java.time.OffsetDateTime,3003)
-2025-02-09T09:18:47.370+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
-2025-02-09T09:18:47.370+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
-2025-02-09T09:18:47.370+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.ZonedDateTimeType -> basicType@3(java.time.ZonedDateTime,3003)
-2025-02-09T09:18:47.371+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
-2025-02-09T09:18:47.372+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
-2025-02-09T09:18:47.374+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetTimeType -> basicType@4(java.time.OffsetTime,3007)
-2025-02-09T09:18:47.374+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> basicType@4(java.time.OffsetTime,3007)
-2025-02-09T09:18:47.375+03:00 DEBUG 88325 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> basicType@4(java.time.OffsetTime,3007)
-2025-02-09T09:18:47.378+03:00 DEBUG 88325 --- [tehnomer] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@5e557671] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@1f2497d9]
-2025-02-09T09:18:49.514+03:00  INFO 88325 --- [tehnomer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-02-09T09:18:49.516+03:00 DEBUG 88325 --- [tehnomer] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@5e557671] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@70b037ac]
-2025-02-09T09:18:49.521+03:00 TRACE 88325 --- [tehnomer] [main] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@70b037ac] for TypeConfiguration
-2025-02-09T09:18:49.522+03:00  INFO 88325 --- [tehnomer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-02-09T09:18:50.562+03:00  INFO 88325 --- [tehnomer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name jwtUserDetailsService
-2025-02-09T09:18:50.743+03:00  WARN 88325 --- [tehnomer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-02-09T09:18:51.960+03:00  INFO 88325 --- [tehnomer] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-02-09T09:18:52.180+03:00 DEBUG 88325 --- [tehnomer] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtRequestFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-02-09T09:18:53.305+03:00  INFO 88325 --- [tehnomer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-09T09:18:53.342+03:00  INFO 88325 --- [tehnomer] [main] com.crm.tehnomer.TehnomerApplication     : Started TehnomerApplication in 16.935 seconds (process running for 18.301)
-2025-02-09T09:18:58.148+03:00  INFO 88325 --- [tehnomer] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-09T09:18:58.149+03:00  INFO 88325 --- [tehnomer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-09T09:18:58.154+03:00  INFO 88325 --- [tehnomer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2025-02-09T09:18:58.210+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing PATCH /api/v1/order/5
-2025-02-09T09:18:58.789+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:18:58.875+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-1] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:18:58.919+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured PATCH /api/v1/order/5
-2025-02-09T09:18:59.150+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:18:59.155+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-1] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:18:59.206+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-1] org.hibernate.SQL                        : select o1_0.id,o1_0.address,c1_0.id,c1_0.active,c1_0.date_joined,c1_0.date_last_enter,c1_0.email,c1_0.information,c1_0.name,c1_0.password,c1_0.phone,r1_0.user_id,r1_0.roles,c1_0.surname,c1_0.type,c1_0.username,o1_0.date_create,o1_0.info,s1_0.id,s1_0.active,s1_0.date_joined,s1_0.date_last_enter,s1_0.email,s1_0.information,s1_0.name,s1_0.password,s1_0.phone,r2_0.user_id,r2_0.roles,s1_0.surname,s1_0.type,s1_0.username,o1_0.status from orders o1_0 left join users c1_0 on c1_0.id=o1_0.user_id_client left join users_role r1_0 on c1_0.id=r1_0.user_id left join users s1_0 on s1_0.id=o1_0.user_id_saler left join users_role r2_0 on s1_0.id=r2_0.user_id where o1_0.id=?
-2025-02-09T09:19:07.365+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing PATCH /api/v1/order/
-2025-02-09T09:19:07.373+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:19:07.379+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-3] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:19:07.391+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured PATCH /api/v1/order/
-2025-02-09T09:19:07.420+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing PATCH /error
-2025-02-09T09:19:07.425+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured PATCH /error
-2025-02-09T09:19:07.465+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-02-09T09:19:12.474+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing PATCH /api/v1/order/5
-2025-02-09T09:19:12.480+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:19:12.485+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-4] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:19:12.495+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured PATCH /api/v1/order/5
-2025-02-09T09:19:12.503+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:19:12.508+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-4] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:19:12.513+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-4] org.hibernate.SQL                        : select o1_0.id,o1_0.address,c1_0.id,c1_0.active,c1_0.date_joined,c1_0.date_last_enter,c1_0.email,c1_0.information,c1_0.name,c1_0.password,c1_0.phone,r1_0.user_id,r1_0.roles,c1_0.surname,c1_0.type,c1_0.username,o1_0.date_create,o1_0.info,s1_0.id,s1_0.active,s1_0.date_joined,s1_0.date_last_enter,s1_0.email,s1_0.information,s1_0.name,s1_0.password,s1_0.phone,r2_0.user_id,r2_0.roles,s1_0.surname,s1_0.type,s1_0.username,o1_0.status from orders o1_0 left join users c1_0 on c1_0.id=o1_0.user_id_client left join users_role r1_0 on c1_0.id=r1_0.user_id left join users s1_0 on s1_0.id=o1_0.user_id_saler left join users_role r2_0 on s1_0.id=r2_0.user_id where o1_0.id=?
-2025-02-09T09:20:16.367+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing PATCH /api/v1/order/3
-2025-02-09T09:20:16.372+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:20:16.379+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-7] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:20:16.389+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured PATCH /api/v1/order/3
-2025-02-09T09:20:16.396+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:20:16.400+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-7] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:20:16.403+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-7] org.hibernate.SQL                        : select o1_0.id,o1_0.address,c1_0.id,c1_0.active,c1_0.date_joined,c1_0.date_last_enter,c1_0.email,c1_0.information,c1_0.name,c1_0.password,c1_0.phone,r1_0.user_id,r1_0.roles,c1_0.surname,c1_0.type,c1_0.username,o1_0.date_create,o1_0.info,s1_0.id,s1_0.active,s1_0.date_joined,s1_0.date_last_enter,s1_0.email,s1_0.information,s1_0.name,s1_0.password,s1_0.phone,r2_0.user_id,r2_0.roles,s1_0.surname,s1_0.type,s1_0.username,o1_0.status from orders o1_0 left join users c1_0 on c1_0.id=o1_0.user_id_client left join users_role r1_0 on c1_0.id=r1_0.user_id left join users s1_0 on s1_0.id=o1_0.user_id_saler left join users_role r2_0 on s1_0.id=r2_0.user_id where o1_0.id=?
-2025-02-09T09:20:20.192+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing PATCH /api/v1/order/32
-2025-02-09T09:20:20.198+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:20:20.203+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-8] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:20:20.213+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured PATCH /api/v1/order/32
-2025-02-09T09:20:20.220+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:20:20.225+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-8] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:20:20.229+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-8] org.hibernate.SQL                        : select o1_0.id,o1_0.address,c1_0.id,c1_0.active,c1_0.date_joined,c1_0.date_last_enter,c1_0.email,c1_0.information,c1_0.name,c1_0.password,c1_0.phone,r1_0.user_id,r1_0.roles,c1_0.surname,c1_0.type,c1_0.username,o1_0.date_create,o1_0.info,s1_0.id,s1_0.active,s1_0.date_joined,s1_0.date_last_enter,s1_0.email,s1_0.information,s1_0.name,s1_0.password,s1_0.phone,r2_0.user_id,r2_0.roles,s1_0.surname,s1_0.type,s1_0.username,o1_0.status from orders o1_0 left join users c1_0 on c1_0.id=o1_0.user_id_client left join users_role r1_0 on c1_0.id=r1_0.user_id left join users s1_0 on s1_0.id=o1_0.user_id_saler left join users_role r2_0 on s1_0.id=r2_0.user_id where o1_0.id=?
-2025-02-09T09:20:21.967+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing PATCH /api/v1/order/2
-2025-02-09T09:20:21.973+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:20:21.978+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-9] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:20:21.988+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured PATCH /api/v1/order/2
-2025-02-09T09:20:21.995+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:20:21.999+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-9] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:20:22.003+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-9] org.hibernate.SQL                        : select o1_0.id,o1_0.address,c1_0.id,c1_0.active,c1_0.date_joined,c1_0.date_last_enter,c1_0.email,c1_0.information,c1_0.name,c1_0.password,c1_0.phone,r1_0.user_id,r1_0.roles,c1_0.surname,c1_0.type,c1_0.username,o1_0.date_create,o1_0.info,s1_0.id,s1_0.active,s1_0.date_joined,s1_0.date_last_enter,s1_0.email,s1_0.information,s1_0.name,s1_0.password,s1_0.phone,r2_0.user_id,r2_0.roles,s1_0.surname,s1_0.type,s1_0.username,o1_0.status from orders o1_0 left join users c1_0 on c1_0.id=o1_0.user_id_client left join users_role r1_0 on c1_0.id=r1_0.user_id left join users s1_0 on s1_0.id=o1_0.user_id_saler left join users_role r2_0 on s1_0.id=r2_0.user_id where o1_0.id=?
-2025-02-09T09:20:22.107+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-9] org.hibernate.SQL                        : update orders set address=?,user_id_client=?,date_create=?,info=?,user_id_saler=?,status=? where id=?
-2025-02-09T09:20:22.122+03:00  INFO 88325 --- [tehnomer] [http-nio-8080-exec-9] c.c.t.services.userService.UserService   : Creating user with name: 123
-2025-02-09T09:20:22.123+03:00 ERROR 88325 --- [tehnomer] [http-nio-8080-exec-9] c.c.t.services.userService.UserService   : Error while creating user
-2025-02-09T09:20:42.368+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing PATCH /api/v1/order/2
-2025-02-09T09:20:42.374+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-10] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:20:42.379+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-10] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:20:42.389+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured PATCH /api/v1/order/2
-2025-02-09T09:20:42.396+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-10] org.hibernate.SQL                        : select u1_0.id,u1_0.active,u1_0.date_joined,u1_0.date_last_enter,u1_0.email,u1_0.information,u1_0.name,u1_0.password,u1_0.phone,u1_0.surname,u1_0.type,u1_0.username from users u1_0 where u1_0.username=?
-2025-02-09T09:20:42.401+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-10] org.hibernate.SQL                        : select r1_0.user_id,r1_0.roles from users_role r1_0 where r1_0.user_id=?
-2025-02-09T09:20:42.405+03:00 DEBUG 88325 --- [tehnomer] [http-nio-8080-exec-10] org.hibernate.SQL                        : select o1_0.id,o1_0.address,c1_0.id,c1_0.active,c1_0.date_joined,c1_0.date_last_enter,c1_0.email,c1_0.information,c1_0.name,c1_0.password,c1_0.phone,r1_0.user_id,r1_0.roles,c1_0.surname,c1_0.type,c1_0.username,o1_0.date_create,o1_0.info,s1_0.id,s1_0.active,s1_0.date_joined,s1_0.date_last_enter,s1_0.email,s1_0.information,s1_0.name,s1_0.password,s1_0.phone,r2_0.user_id,r2_0.roles,s1_0.surname,s1_0.type,s1_0.username,o1_0.status from orders o1_0 left join users c1_0 on c1_0.id=o1_0.user_id_client left join users_role r1_0 on c1_0.id=r1_0.user_id left join users s1_0 on s1_0.id=o1_0.user_id_saler left join users_role r2_0 on s1_0.id=r2_0.user_id where o1_0.id=?
-2025-02-09T09:20:42.414+03:00  INFO 88325 --- [tehnomer] [http-nio-8080-exec-10] c.c.t.services.userService.UserService   : Creating user with name: 123
-2025-02-09T09:20:42.415+03:00 ERROR 88325 --- [tehnomer] [http-nio-8080-exec-10] c.c.t.services.userService.UserService   : Error while creating user
-2025-02-09T09:20:57.875+03:00  INFO 88325 --- [tehnomer] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-02-09T09:20:57.880+03:00  INFO 88325 --- [tehnomer] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-02-09T09:20:57.896+03:00  INFO 88325 --- [tehnomer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-02-09T09:20:57.898+03:00 TRACE 88325 --- [tehnomer] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@70b037ac] for TypeConfiguration
-2025-02-09T09:20:57.898+03:00 DEBUG 88325 --- [tehnomer] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@674e362a] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@70b037ac]
-2025-02-09T09:20:57.902+03:00  INFO 88325 --- [tehnomer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-09T09:20:57.933+03:00  INFO 88325 --- [tehnomer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-10T06:44:45.099+03:00 DEBUG 10207 --- [tehnomer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@6a7ab205) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@10cb5047)
+2025-02-10T06:44:45.100+03:00 DEBUG 10207 --- [tehnomer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3a00237d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@bc88295)
+2025-02-10T06:44:45.103+03:00 DEBUG 10207 --- [tehnomer] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2004, BlobTypeDescriptor(BLOB_BINDING)) replaced previous registration(BlobTypeDescriptor(DEFAULT))
+2025-02-10T06:44:45.103+03:00 DEBUG 10207 --- [tehnomer] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(CLOB_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-02-10T06:44:45.115+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration JAVA_OBJECT -> org.hibernate.type.JavaObjectType@582b14e2
+2025-02-10T06:44:45.115+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@582b14e2
+2025-02-10T06:44:45.116+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Type registration key [java.lang.Object] overrode previous entry : `org.hibernate.type.JavaObjectType@51e0f2eb`
+2025-02-10T06:44:45.123+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2025-02-10T06:44:45.123+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2025-02-10T06:44:45.123+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2025-02-10T06:44:45.128+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetDateTimeType -> basicType@2(java.time.OffsetDateTime,3003)
+2025-02-10T06:44:45.128+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
+2025-02-10T06:44:45.129+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
+2025-02-10T06:44:45.129+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.ZonedDateTimeType -> basicType@3(java.time.ZonedDateTime,3003)
+2025-02-10T06:44:45.129+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
+2025-02-10T06:44:45.129+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
+2025-02-10T06:44:45.130+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetTimeType -> basicType@4(java.time.OffsetTime,3007)
+2025-02-10T06:44:45.130+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> basicType@4(java.time.OffsetTime,3007)
+2025-02-10T06:44:45.130+03:00 DEBUG 10207 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> basicType@4(java.time.OffsetTime,3007)
+2025-02-10T06:44:45.132+03:00 DEBUG 10207 --- [tehnomer] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@d763b06] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@2526d5f9]
+2025-02-10T06:44:46.404+03:00  INFO 10207 --- [tehnomer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-10T06:44:46.405+03:00 DEBUG 10207 --- [tehnomer] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@d763b06] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@4973dacf]
+2025-02-10T06:44:46.408+03:00 TRACE 10207 --- [tehnomer] [main] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@4973dacf] for TypeConfiguration
+2025-02-10T06:44:46.409+03:00  INFO 10207 --- [tehnomer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-10T06:44:47.042+03:00  INFO 10207 --- [tehnomer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name jwtUserDetailsService
+2025-02-10T06:44:47.177+03:00  WARN 10207 --- [tehnomer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-10T06:44:47.915+03:00  INFO 10207 --- [tehnomer] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-02-10T06:44:48.715+03:00  WARN 10207 --- [tehnomer] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-02-10T06:44:48.721+03:00  INFO 10207 --- [tehnomer] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-10T06:44:48.723+03:00 TRACE 10207 --- [tehnomer] [main] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@4973dacf] for TypeConfiguration
+2025-02-10T06:44:48.723+03:00 DEBUG 10207 --- [tehnomer] [main] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@1886e8b9] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@4973dacf]
+2025-02-10T06:44:48.725+03:00  INFO 10207 --- [tehnomer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-10T06:44:48.745+03:00  INFO 10207 --- [tehnomer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-10T06:44:48.781+03:00  INFO 10207 --- [tehnomer] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-10T06:44:48.808+03:00 ERROR 10207 --- [tehnomer] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-02-10T06:53:17.169+03:00  INFO 16932 --- [tehnomer] [main] com.crm.tehnomer.TehnomerApplication     : Starting TehnomerApplication using Java 21.0.6 with PID 16932 (/home/tework/projects/JavaProjects/tehnomer/target/classes started by tework in /home/tework/projects/JavaProjects/tehnomer)
+2025-02-10T06:53:17.176+03:00  INFO 16932 --- [tehnomer] [main] com.crm.tehnomer.TehnomerApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-02-10T06:53:18.750+03:00  INFO 16932 --- [tehnomer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-10T06:53:18.874+03:00  INFO 16932 --- [tehnomer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 3 JPA repository interfaces.
+2025-02-10T06:53:20.077+03:00  INFO 16932 --- [tehnomer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-10T06:53:20.098+03:00  INFO 16932 --- [tehnomer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-10T06:53:20.099+03:00  INFO 16932 --- [tehnomer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-10T06:53:20.191+03:00  INFO 16932 --- [tehnomer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-10T06:53:20.192+03:00  INFO 16932 --- [tehnomer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2914 ms
+2025-02-10T06:53:20.710+03:00  INFO 16932 --- [tehnomer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-10T06:53:21.205+03:00  INFO 16932 --- [tehnomer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@78e387d6
+2025-02-10T06:53:21.208+03:00  INFO 16932 --- [tehnomer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-10T06:53:21.423+03:00  INFO 16932 --- [tehnomer] [main] liquibase.database                       : Set default schema name to public
+2025-02-10T06:53:21.854+03:00  INFO 16932 --- [tehnomer] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2025-02-10T06:53:21.971+03:00  INFO 16932 --- [tehnomer] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-02-10T06:53:21.978+03:00  INFO 16932 --- [tehnomer] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2025-02-10T06:53:21.994+03:00  INFO 16932 --- [tehnomer] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-10T06:53:21.994+03:00  INFO 16932 --- [tehnomer] [main] liquibase.util                           : Run:                          0
+2025-02-10T06:53:21.995+03:00  INFO 16932 --- [tehnomer] [main] liquibase.util                           : Previously run:               1
+2025-02-10T06:53:21.995+03:00  INFO 16932 --- [tehnomer] [main] liquibase.util                           : Filtered out:                 0
+2025-02-10T06:53:21.995+03:00  INFO 16932 --- [tehnomer] [main] liquibase.util                           : -------------------------------
+2025-02-10T06:53:21.996+03:00  INFO 16932 --- [tehnomer] [main] liquibase.util                           : Total change sets:            1
+2025-02-10T06:53:21.998+03:00  INFO 16932 --- [tehnomer] [main] liquibase.util                           : Update summary generated
+2025-02-10T06:53:22.000+03:00  INFO 16932 --- [tehnomer] [main] liquibase.command                        : Command execution complete
+2025-02-10T06:53:22.549+03:00  INFO 16932 --- [tehnomer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-10T06:53:22.636+03:00  INFO 16932 --- [tehnomer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-10T06:53:22.693+03:00  INFO 16932 --- [tehnomer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-10T06:53:22.834+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@25172993
+2025-02-10T06:53:22.834+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@25172993
+2025-02-10T06:53:22.835+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@25172993
+2025-02-10T06:53:22.835+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@3f71ae7f
+2025-02-10T06:53:22.835+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@3f71ae7f
+2025-02-10T06:53:22.836+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@5b32e0b1
+2025-02-10T06:53:22.836+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@5b32e0b1
+2025-02-10T06:53:22.837+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@d1d85d0
+2025-02-10T06:53:22.837+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@d1d85d0
+2025-02-10T06:53:22.837+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@115a7e51
+2025-02-10T06:53:22.838+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@115a7e51
+2025-02-10T06:53:22.838+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@115a7e51
+2025-02-10T06:53:22.838+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@23ea3853
+2025-02-10T06:53:22.839+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@23ea3853
+2025-02-10T06:53:22.840+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@23ea3853
+2025-02-10T06:53:22.840+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@6f1163f7
+2025-02-10T06:53:22.840+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@6f1163f7
+2025-02-10T06:53:22.841+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@e4348c0
+2025-02-10T06:53:22.841+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@4ca907af
+2025-02-10T06:53:22.842+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@4ca907af
+2025-02-10T06:53:22.842+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@3ef396c9
+2025-02-10T06:53:22.843+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@5a99543b
+2025-02-10T06:53:22.843+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@4e0802e0
+2025-02-10T06:53:22.843+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@4e0802e0
+2025-02-10T06:53:22.844+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@4e0802e0
+2025-02-10T06:53:22.845+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@4a18e0f1
+2025-02-10T06:53:22.845+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@4a18e0f1
+2025-02-10T06:53:22.846+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@4a18e0f1
+2025-02-10T06:53:22.846+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@687f62a5
+2025-02-10T06:53:22.847+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@687f62a5
+2025-02-10T06:53:22.848+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@687f62a5
+2025-02-10T06:53:22.849+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@7857cb1d
+2025-02-10T06:53:22.850+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@7857cb1d
+2025-02-10T06:53:22.850+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@7857cb1d
+2025-02-10T06:53:22.850+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@7646c9f5
+2025-02-10T06:53:22.850+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@7646c9f5
+2025-02-10T06:53:22.851+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@7646c9f5
+2025-02-10T06:53:22.851+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@7b54a0a4
+2025-02-10T06:53:22.851+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@7b54a0a4
+2025-02-10T06:53:22.851+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@682d9f21
+2025-02-10T06:53:22.851+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@682d9f21
+2025-02-10T06:53:22.852+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@2e64ae1a
+2025-02-10T06:53:22.852+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@2e64ae1a
+2025-02-10T06:53:22.852+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@2e64ae1a
+2025-02-10T06:53:22.852+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@6eadd342
+2025-02-10T06:53:22.852+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@30a20fb3
+2025-02-10T06:53:22.853+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@30a20fb3
+2025-02-10T06:53:22.854+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@34f24a11
+2025-02-10T06:53:22.855+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@3f6d36eb
+2025-02-10T06:53:22.856+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@3f6d36eb
+2025-02-10T06:53:22.856+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@3f6d36eb
+2025-02-10T06:53:22.857+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@3f5ac587
+2025-02-10T06:53:22.858+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@1fa58a48
+2025-02-10T06:53:22.859+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@3921e96f
+2025-02-10T06:53:22.861+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@6fad5ace
+2025-02-10T06:53:22.862+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@6fad5ace
+2025-02-10T06:53:22.863+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@632dc41
+2025-02-10T06:53:22.864+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@632dc41
+2025-02-10T06:53:22.865+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@35f6f105
+2025-02-10T06:53:22.866+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@3aa1c45
+2025-02-10T06:53:22.867+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@6d45dd4
+2025-02-10T06:53:22.868+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@1614499b
+2025-02-10T06:53:22.868+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@1468fc85
+2025-02-10T06:53:22.870+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@47f39279
+2025-02-10T06:53:22.871+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@63ed5dae
+2025-02-10T06:53:22.872+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@63ed5dae
+2025-02-10T06:53:22.873+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@578198d9
+2025-02-10T06:53:22.874+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@578198d9
+2025-02-10T06:53:22.875+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@4deca78
+2025-02-10T06:53:22.877+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@4deca78
+2025-02-10T06:53:22.878+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@5f65e0c0
+2025-02-10T06:53:22.878+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@5f65e0c0
+2025-02-10T06:53:22.878+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@566cc6af
+2025-02-10T06:53:22.879+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@566cc6af
+2025-02-10T06:53:22.880+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@d70dbeb
+2025-02-10T06:53:22.881+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@7f8f5d37
+2025-02-10T06:53:22.882+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@f9cd1e6
+2025-02-10T06:53:22.884+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@f9cd1e6
+2025-02-10T06:53:22.885+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@3ff53704
+2025-02-10T06:53:22.885+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@34d11c92
+2025-02-10T06:53:22.886+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@31b289da
+2025-02-10T06:53:22.886+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@58486deb
+2025-02-10T06:53:22.886+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@58486deb
+2025-02-10T06:53:22.887+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@4e933cf1
+2025-02-10T06:53:22.887+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@729a9c3d
+2025-02-10T06:53:22.889+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@574327ed
+2025-02-10T06:53:22.889+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@574327ed
+2025-02-10T06:53:22.889+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@4c7f2fdb
+2025-02-10T06:53:22.890+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@4c7f2fdb
+2025-02-10T06:53:22.890+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@1b5cf611
+2025-02-10T06:53:22.891+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@1b5cf611
+2025-02-10T06:53:22.892+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@1b5cf611
+2025-02-10T06:53:22.892+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@3d01ea33
+2025-02-10T06:53:22.893+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@3d01ea33
+2025-02-10T06:53:22.894+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@3d01ea33
+2025-02-10T06:53:22.894+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@73b3ce31
+2025-02-10T06:53:22.895+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@4687366b
+2025-02-10T06:53:22.897+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@3a17acd4
+2025-02-10T06:53:22.897+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@3a17acd4
+2025-02-10T06:53:22.899+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@8f589d7
+2025-02-10T06:53:22.899+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@8f589d7
+2025-02-10T06:53:22.900+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@8f589d7
+2025-02-10T06:53:22.901+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@65da1cbe
+2025-02-10T06:53:22.902+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@1a914a00
+2025-02-10T06:53:22.903+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@1d67348a
+2025-02-10T06:53:22.904+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@1d67348a
+2025-02-10T06:53:22.905+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@39f8adc0
+2025-02-10T06:53:22.906+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@39f8adc0
+2025-02-10T06:53:22.907+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@39f8adc0
+2025-02-10T06:53:22.907+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@c7269ad
+2025-02-10T06:53:22.909+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@c7269ad
+2025-02-10T06:53:22.909+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@1c23e369
+2025-02-10T06:53:22.910+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@1c23e369
+2025-02-10T06:53:22.911+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@38445703
+2025-02-10T06:53:22.911+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@38445703
+2025-02-10T06:53:22.912+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@44ae6b66
+2025-02-10T06:53:22.912+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@44ae6b66
+2025-02-10T06:53:22.913+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@5b0e5d5f
+2025-02-10T06:53:22.913+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@5b0e5d5f
+2025-02-10T06:53:22.914+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@58b5d5fc
+2025-02-10T06:53:22.914+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float_vector -> org.hibernate.type.BasicTypeReference@42536da6
+2025-02-10T06:53:22.914+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double_vector -> org.hibernate.type.BasicTypeReference@7591cbd1
+2025-02-10T06:53:22.914+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte_vector -> org.hibernate.type.BasicTypeReference@5cdc8499
+2025-02-10T06:53:22.914+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@2a30b0cb
+2025-02-10T06:53:22.919+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@11174bf
+2025-02-10T06:53:22.920+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@11174bf
+2025-02-10T06:53:22.922+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@402c9a60
+2025-02-10T06:53:22.922+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@7d43f1c9
+2025-02-10T06:53:22.922+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@eddc9bb
+2025-02-10T06:53:22.922+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@11e3d08
+2025-02-10T06:53:22.923+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@25c548d1
+2025-02-10T06:53:22.923+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@476a2819
+2025-02-10T06:53:22.923+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@279ab15e
+2025-02-10T06:53:22.923+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@571c2ed8
+2025-02-10T06:53:22.923+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@5810772a
+2025-02-10T06:53:23.268+03:00  INFO 16932 --- [tehnomer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-10T06:53:23.400+03:00  INFO 16932 --- [tehnomer] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-10T06:53:23.415+03:00 DEBUG 16932 --- [tehnomer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@46507dda) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@52463255)
+2025-02-10T06:53:23.416+03:00 DEBUG 16932 --- [tehnomer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@66f5770e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@16024b49)
+2025-02-10T06:53:23.427+03:00 DEBUG 16932 --- [tehnomer] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2004, BlobTypeDescriptor(BLOB_BINDING)) replaced previous registration(BlobTypeDescriptor(DEFAULT))
+2025-02-10T06:53:23.427+03:00 DEBUG 16932 --- [tehnomer] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(CLOB_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-02-10T06:53:23.448+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration JAVA_OBJECT -> org.hibernate.type.JavaObjectType@c3ca482
+2025-02-10T06:53:23.449+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@c3ca482
+2025-02-10T06:53:23.451+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Type registration key [java.lang.Object] overrode previous entry : `org.hibernate.type.JavaObjectType@11174bf`
+2025-02-10T06:53:23.462+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2025-02-10T06:53:23.463+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2025-02-10T06:53:23.464+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2025-02-10T06:53:23.472+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetDateTimeType -> basicType@2(java.time.OffsetDateTime,3003)
+2025-02-10T06:53:23.473+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
+2025-02-10T06:53:23.474+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
+2025-02-10T06:53:23.476+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.ZonedDateTimeType -> basicType@3(java.time.ZonedDateTime,3003)
+2025-02-10T06:53:23.477+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
+2025-02-10T06:53:23.478+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
+2025-02-10T06:53:23.481+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetTimeType -> basicType@4(java.time.OffsetTime,3007)
+2025-02-10T06:53:23.481+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> basicType@4(java.time.OffsetTime,3007)
+2025-02-10T06:53:23.482+03:00 DEBUG 16932 --- [tehnomer] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> basicType@4(java.time.OffsetTime,3007)
+2025-02-10T06:53:23.485+03:00 DEBUG 16932 --- [tehnomer] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@2148b47e] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@410f1452]
+2025-02-10T06:53:24.863+03:00  INFO 16932 --- [tehnomer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-10T06:53:24.864+03:00 DEBUG 16932 --- [tehnomer] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@2148b47e] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@688884e]
+2025-02-10T06:53:24.866+03:00 TRACE 16932 --- [tehnomer] [main] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@688884e] for TypeConfiguration
+2025-02-10T06:53:24.867+03:00  INFO 16932 --- [tehnomer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-10T06:53:25.550+03:00  INFO 16932 --- [tehnomer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name jwtUserDetailsService
+2025-02-10T06:53:25.653+03:00  WARN 16932 --- [tehnomer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-10T06:53:26.426+03:00  INFO 16932 --- [tehnomer] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-02-10T06:53:27.320+03:00  INFO 16932 --- [tehnomer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-10T06:53:27.351+03:00  INFO 16932 --- [tehnomer] [main] com.crm.tehnomer.TehnomerApplication     : Started TehnomerApplication in 10.83 seconds (process running for 11.886)
+2025-02-10T06:53:28.903+03:00  INFO 16932 --- [tehnomer] [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-10T06:53:28.904+03:00  INFO 16932 --- [tehnomer] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-10T06:53:28.906+03:00  INFO 16932 --- [tehnomer] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-10T06:53:37.210+03:00  INFO 16932 --- [tehnomer] [http-nio-8080-exec-2] c.c.t.services.userService.UserService   : Creating user with name: 123
+2025-02-10T06:53:37.210+03:00 ERROR 16932 --- [tehnomer] [http-nio-8080-exec-2] c.c.t.services.userService.UserService   : Error while creating user
+2025-02-10T06:53:40.647+03:00  INFO 16932 --- [tehnomer] [http-nio-8080-exec-3] c.c.t.services.userService.UserService   : Creating user with name: 123
+2025-02-10T06:53:40.647+03:00 ERROR 16932 --- [tehnomer] [http-nio-8080-exec-3] c.c.t.services.userService.UserService   : Error while creating user
+2025-02-10T06:55:07.214+03:00  INFO 16932 --- [tehnomer] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-10T06:55:07.219+03:00  INFO 16932 --- [tehnomer] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-10T06:55:07.230+03:00  INFO 16932 --- [tehnomer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-10T06:55:07.231+03:00 TRACE 16932 --- [tehnomer] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@688884e] for TypeConfiguration
+2025-02-10T06:55:07.231+03:00 DEBUG 16932 --- [tehnomer] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@661e475f] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@688884e]
+2025-02-10T06:55:07.233+03:00  INFO 16932 --- [tehnomer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-10T06:55:07.249+03:00  INFO 16932 --- [tehnomer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

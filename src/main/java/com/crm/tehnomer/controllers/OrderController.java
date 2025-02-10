@@ -82,8 +82,9 @@ public class OrderController {
 
         return ResponseEntity.ok(ResponseDto.toDto("Request status changed to PROCESSING_BY_THE_SELLER_STATUS"));
     }
-    // 1  переписать обработку ошибок с gpt, нихрена не работает
 
+
+    
     // createOrderBySaler
 
 

@@ -14,9 +14,13 @@ replay_pid*
 ## MySpring
 ##############################
 application.properties
+application.yaml
 applicationTest.properties
 applicationTest.txt
 junit-platform.properties
+logs/
+logs
+application.txt
 
 ##############################
 ## Maven
