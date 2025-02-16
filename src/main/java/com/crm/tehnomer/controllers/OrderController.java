@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.crm.tehnomer.dtos.ResponseDto;
-import com.crm.tehnomer.dtos.order.OrderCreateByClientDto;
+import com.crm.tehnomer.dtos.order.OrderCreateDto;
 import com.crm.tehnomer.dtos.order.OrderGetDto;
 import com.crm.tehnomer.dtos.order.TakeRequestedOrderBySalerDto;
 import com.crm.tehnomer.entities.Order;
@@ -49,12 +49,12 @@ public class OrderController {
      * @param OrderCreateByClientDto orderDto
      * @return message
      */
-    @PostMapping("/client")
-    public ResponseEntity<ResponseDto> createOrderByClient(
-            @Validated @RequestBody OrderCreateByClientDto orderCreateByClientDto) {
-        User client = userService.createUserClient(orderCreateByClientDto);
-        orderService.createOrder(orderCreateByClientDto, client);
-        return ResponseEntity.ok(ResponseDto.toDto("Order created by " + client.getEmail()));
+    @PostMapping("")
+    public ResponseEntity<ResponseDto> createOrder(
+            @Validated @RequestBody OrderCreateDto orderCreateDto, Authentication auth) {
+        User user = userRepository.findByUsername(auth.getName());
+        orderService.createOrder(orderCreateDto, user);
+        return ResponseEntity.ok(ResponseDto.toDto("Order created by " + user.getEmail()));
     }
 
     /**
@@ -83,10 +83,7 @@ public class OrderController {
         return ResponseEntity.ok(ResponseDto.toDto("Request status changed to PROCESSING_BY_THE_SELLER_STATUS"));
     }
 
-
-    
     // createOrderBySaler
-
 
     // 2 изменить заказ, добавить новые позиции(по гайду в миро) это в другом
     // контроллере(order_product)

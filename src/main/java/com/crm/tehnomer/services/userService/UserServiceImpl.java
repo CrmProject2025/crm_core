@@ -1,6 +1,7 @@
 package com.crm.tehnomer.services.userService;
 
-import com.crm.tehnomer.dtos.order.OrderCreateByClientDto;
+import com.crm.tehnomer.dtos.order.OrderCreateDto;
+import com.crm.tehnomer.dtos.user.CreateClientDto;
 import com.crm.tehnomer.dtos.user.SignUpClientDto;
 import com.crm.tehnomer.dtos.user.SignUpDto;
 import com.crm.tehnomer.entities.User;
@@ -9,6 +10,9 @@ import com.crm.tehnomer.exceptions.customException.CustomException;
 import com.crm.tehnomer.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -19,10 +23,11 @@ public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
     private PasswordEncoder passwordEncoder;
+    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
-    public User createUserClient(OrderCreateByClientDto orderCreateByClientDto) {
+    public User createUserClient(CreateClientDto createClientDto) {
 
-        String usernameEmail = orderCreateByClientDto.getEmail();
+        String usernameEmail = createClientDto.getEmail();
 
         if (userRepository.existsByUsername(usernameEmail)) {
             throw new CustomException(HttpStatus.BAD_REQUEST, "User already exist");
@@ -35,12 +40,14 @@ public class UserServiceImpl implements UserService {
         User user = new User(usernameEmail,
                 passwordEncoder.encode(PasswordGenerator.generatePassword(12)),
                 Role.CLIENT_ROLE);
-        user.setEmail(orderCreateByClientDto.getEmail());
-        user.setInformation(orderCreateByClientDto.getInfo());
+        user.setEmail(createClientDto.getEmail());
         user.setActive(true);
-        user.setPhone(orderCreateByClientDto.getPhone());
+        user.setPhone(createClientDto.getPhone());
+        User newUser = userRepository.save(user);
 
-        return userRepository.save(user);
+        logger.info("Creating user client with email: {}", newUser.getEmail());
+        
+        return newUser;
 
     }
 

@@ -12,12 +12,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
-import com.crm.tehnomer.dtos.order.OrderCreateByClientDto;
+import com.crm.tehnomer.dtos.order.OrderCreateDto;
 import com.crm.tehnomer.dtos.order.TakeRequestedOrderBySalerDto;
 import com.crm.tehnomer.entities.Order;
 import com.crm.tehnomer.entities.User;
 import com.crm.tehnomer.entities.enums.OrderStatus;
 import com.crm.tehnomer.exceptions.customException.CustomException;
+import com.crm.tehnomer.exceptions.exception.OrderNotFoundException;
 import com.crm.tehnomer.exceptions.exception.UserNotFoundException;
 import com.crm.tehnomer.repositories.OrderRepository;
 import com.crm.tehnomer.services.userService.UserService;
@@ -33,13 +34,15 @@ public class OrderServiceImpl implements OrderService {
     private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     @Override
-    public Order createOrder(OrderCreateByClientDto orderCreateByClientDto, User client) {
+    public void createOrder(OrderCreateDto orderCreateDto, User client) {
         Order order = new Order();
         order.setClient(client);
-        order.setInfo(orderCreateByClientDto.getInfo());
-        order.setAddress(orderCreateByClientDto.getAddress());
+        order.setInfo(orderCreateDto.getInfo());
+        order.setAddress(orderCreateDto.getAddress());
         order.setStatus(OrderStatus.REQUEST_STATUS);
-        return orderRepository.save(order);
+        orderRepository.save(order);
+        logger.info("Creating order for user(email): {}", order.getClient().getEmail());
+
     }
 
     public Page<Order> listOrders(OrderStatus status, int page, int size) {
@@ -51,17 +54,12 @@ public class OrderServiceImpl implements OrderService {
     // будет менять статус на любой, который приходит из контроллера
     public void editOrderStatus(Long id, TakeRequestedOrderBySalerDto takeRequestedOrderBySalerDto,
             User currentUser) {
-                //  тут надо notfound order а нен юзер
         Order oldOrder = orderRepository.findById(id)
-                .orElseThrow(() -> new UserNotFoundException("not found user with email:"
-                        + currentUser.getEmail()));
+                .orElseThrow(() -> new OrderNotFoundException("not found order with id:" + id));
 
         oldOrder.setStatus(takeRequestedOrderBySalerDto.getStatus());
         orderRepository.save(oldOrder);
         logger.info("Creating user with name: {}", 123);
-        logger.debug("User created successfully");
-
-        logger.error("Error while creating user", 1233);
 
     }
 

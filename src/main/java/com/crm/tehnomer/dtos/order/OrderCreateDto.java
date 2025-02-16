@@ -8,17 +8,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class OrderCreateByClientDto {
+public class OrderCreateDto {
 
     private String info;
 
     private String address;
-
-    @NotNull
-    @Email(message = "Некорректный email")
-    private String email;
-
-    @NotNull
-    private int phone;
 
 }
