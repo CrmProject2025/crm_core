@@ -19,7 +19,8 @@ applicationTest.properties
 applicationTest.txt
 junit-platform.properties
 logs/
-logs
+
+
 application.txt
 
 ##############################
