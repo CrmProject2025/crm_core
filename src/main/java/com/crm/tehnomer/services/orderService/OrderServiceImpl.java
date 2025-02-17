@@ -51,6 +51,11 @@ public class OrderServiceImpl implements OrderService {
         return orderRepository.findAllByStatus(status, pageable);
     }
 
+    public List<Order> listOrdersTest() {
+        List<Order> orders = orderRepository.findAll();
+        return orders;
+    }
+
     // будет менять статус на любой, который приходит из контроллера
     public void editOrderStatus(Long id, TakeRequestedOrderBySalerDto takeRequestedOrderBySalerDto,
             User currentUser) {

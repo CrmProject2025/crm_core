@@ -60,9 +60,12 @@ public class OrderGetDto {
     }
 
     public static Page<OrderGetDto> toPageOrders(Page<Order> orderFromDb) {
-        // return orderFromDb.stream().map(OrderGetDto::toDto)
-        // .collect(Collectors.toPage());
         return orderFromDb.map(OrderGetDto::toDto);
+    }
+
+    public static List<OrderGetDto> toListOrders(List<Order> orderFromDb) {
+        return orderFromDb.stream().map(OrderGetDto::toDto)
+                .collect(Collectors.toList());
     }
 
 }

@@ -88,4 +88,11 @@ public class OrderController {
     // 2 изменить заказ, добавить новые позиции(по гайду в миро) это в другом
     // контроллере(order_product)
 
+    @GetMapping("/test")
+    public List<OrderGetDto> testReact(Authentication auth) {
+        System.out.println(auth.getName());
+        List<Order> orders = orderService.listOrdersTest();
+        return OrderGetDto.toListOrders(orders);
+
+    }
 }

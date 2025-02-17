@@ -56,7 +56,8 @@ public class WebSecurityConfig {
                                 "/users",
                                 "/book",
                                 "/book/{id}",
-                                "/relationship"
+                                "/relationship",
+                                "/api/v1/order/test"
                         ).authenticated()
                         .requestMatchers(HttpMethod.POST,
                                 "/book",

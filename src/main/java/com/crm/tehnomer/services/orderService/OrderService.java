@@ -1,5 +1,7 @@
 package com.crm.tehnomer.services.orderService;
 
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 
 import com.crm.tehnomer.dtos.order.OrderCreateDto;
@@ -13,6 +15,8 @@ public interface OrderService {
     void createOrder(OrderCreateDto orderCreateDto, User currentUser);
 
     Page listOrders(OrderStatus status, int page, int size);
+
+    List<Order> listOrdersTest();
 
     void editOrderStatus(Long id, TakeRequestedOrderBySalerDto takeRequestedOrderBySaler,
             User currentUser);
