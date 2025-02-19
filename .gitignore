@@ -15,6 +15,8 @@ replay_pid*
 ##############################
 application.properties
 application.yaml
+application-docker.yml
+application-local.yml
 applicationTest.properties
 applicationTest.txt
 junit-platform.properties

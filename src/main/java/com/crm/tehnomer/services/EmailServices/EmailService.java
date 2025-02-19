@@ -1,4 +1,4 @@
-package com.crm.tehnomer.services;
+package com.crm.tehnomer.services.EmailServices;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
