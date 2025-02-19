@@ -13,7 +13,7 @@ import com.crm.tehnomer.dtos.ResponseDto;
 import com.crm.tehnomer.dtos.order.OrderCreateDto;
 import com.crm.tehnomer.dtos.user.CreateClientDto;
 import com.crm.tehnomer.entities.User;
-import com.crm.tehnomer.services.EmailService;
+import com.crm.tehnomer.services.EmailServices.EmailService;
 import com.crm.tehnomer.services.userService.UserService;
 
 import lombok.AllArgsConstructor;
