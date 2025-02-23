@@ -1,0 +1,43 @@
+# Для каждого микросервиса(репозитория) (только на eureka-server добавлять) 
+# свой docker-compose(работает аналогично, но собирает только свой микросервис и бд,
+# запускаются unit, integration, api тесты) 
+
+services:
+
+  core-service:
+    build: .
+    container_name: core-service
+    restart: always
+    depends_on:
+      - db
+    networks:
+      - backend
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/tehnomerDB
+      - SPRING_DATASOURCE_USERNAME=tework
+      - SPRING_DATASOURCE_PASSWORD=ksflkOkas23fl9saflKdl349sLfsk1
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_ENABLED=true 
+    ports:
+      - "8080:8080"
+
+  db:
+    image: postgres:17
+    container_name: db
+    restart: always
+    networks:
+      - backend
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_DB=tehnomerDB
+      - POSTGRES_USER=tework
+      - POSTGRES_PASSWORD=ksflkOkas23fl9saflKdl349sLfsk1
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+networks:
+  backend:
+
+volumes:
+  postgres_data:

@@ -11,6 +11,9 @@ import com.crm.tehnomer.settings.security.jwt.JwtResponse;
 import com.crm.tehnomer.settings.security.jwt.JwtTokenUtil;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -28,6 +31,7 @@ public class UserLoginController {
     private AuthenticationManager authenticationManager;
     private JwtTokenUtil jwtTokenUtil;
     private JwtUserDetailsService jwtUserDetailsService;
+    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Validated @RequestBody SignUpDto signUpDto) {
@@ -60,6 +64,10 @@ public class UserLoginController {
 
     @GetMapping("/users")
     public ResponseEntity<ResponseDto> getUsers(Authentication auth) {
+        logger.info("Creating order for user(email): {}", 1234);
+        logger.debug("Creating order for user(email): {}", 1234);
+        logger.error("Creating order for user(email): {}", 1234);
+
         return ResponseEntity.ok(ResponseDto.toDto("users give to you"));
     }
 }
