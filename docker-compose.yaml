@@ -12,6 +12,7 @@ services:
       - db
     networks:
       - backend
+      
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/tehnomerDB
       - SPRING_DATASOURCE_USERNAME=tework
