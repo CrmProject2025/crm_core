@@ -146,12 +146,6 @@
 
 
 		<dependency>
-			<groupId>ru.tework</groupId>
-			<artifactId>spring6kafka</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		
-		<dependency>
 			<groupId>com.example2</groupId>
 			<artifactId>library_kafka_dtos</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
