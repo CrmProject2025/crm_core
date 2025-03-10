@@ -154,6 +154,14 @@
 
 	</dependencies>
 
+	<repositories>
+
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/CrmProject2025/library_kafka_dtos</url>
+		</repository>
+	</repositories>
+
 	<build>
 		<plugins>
 			<plugin>

@@ -39,9 +39,7 @@ public class KafkaConsumerConfig {
         return new DefaultKafkaConsumerFactory<>(configProps);
     }
 
-    // @Bean
-    // public ConcurrentMessageListenerContainer<Long, Object>
-    // kafkaListenerContainer() {
-    // return new ConcurrentMessageListenerContainer<>(consumerFactory());
-    // }
+    
+
+
 }
