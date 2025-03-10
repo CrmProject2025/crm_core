@@ -41,7 +41,7 @@ public class Product {
     @Column(precision = 10, scale = 2, nullable = false)
     private BigDecimal price;
 
-    private int guarantee;
+    private Integer guarantee;
 
     @Column(nullable = false)
     private boolean deprecated;

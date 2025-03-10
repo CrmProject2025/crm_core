@@ -21,7 +21,6 @@ import com.crm.tehnomer.repositories.UserRepository;
 import com.crm.tehnomer.services.orderService.OrderService;
 import com.crm.tehnomer.services.userService.UserService;
 
-
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -52,12 +51,6 @@ public class OrderController {
         return ResponseEntity.ok(ResponseDto.toDto("Order created by " + user.getEmail()));
     }
 
-    /**
-     * Client create order (request for saler)
-     *
-     * @param OrderCreateByClientDto orderDto
-     * @return message
-     */
     @GetMapping("")
     public Page<OrderGetDto> getRequestedOrders(
             @RequestParam(defaultValue = "REQUEST_STATUS") OrderStatus status,

@@ -26,7 +26,7 @@ public class KafkaConsumerConfig {
         // Настройка свойств для подключения к Kafka
         Map<String, Object> configProps = new HashMap<>();
         configProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092,localhost:10092,localhost:11092");
-        configProps.put(ConsumerConfig.GROUP_ID_CONFIG, "measurement-created-events");
+        // configProps.put(ConsumerConfig.GROUP_ID_CONFIG, "measurement-created-events");
         configProps.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, LongDeserializer.class);
         configProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,
         JsonDeserializer.class);
