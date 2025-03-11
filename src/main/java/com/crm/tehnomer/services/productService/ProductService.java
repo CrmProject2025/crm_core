@@ -43,17 +43,23 @@ public class ProductService {
         return productRepository.findAll(specification);
     }
 
-    public void createProduct(ProductCreateDto productCreateDto, User user) {
+    public void createProduct(ProductCreateDto productCreateDto) {
+        // заменить на метод в маппере
         Product product = new Product();
-        product.setName(null);
-        product.setModel(null);
-        product.setDescription(null);
-        product.setPrice(null);
-        product.setGuarantee(null);
-        product.setDeprecated(false);
+        product.setName(productCreateDto.getName());
+        product.setModel(productCreateDto.getModel());
+        product.setDescription(productCreateDto.getDescription());
+        product.setPrice(productCreateDto.getPrice());
+        product.setGuarantee(productCreateDto.getGuarantee());
+        product.setDeprecated(productCreateDto.getDeprecated());
 
         productRepository.save(product);
         logger.info("Creating product with id: {}", product.getId());
+
+    }
+
+    public void updateProduct(UpdateProductDto updateProductDto){
+        Product product = getProduct
 
     }
 

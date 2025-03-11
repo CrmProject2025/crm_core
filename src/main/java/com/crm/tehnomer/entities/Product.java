@@ -44,7 +44,7 @@ public class Product {
     private Integer guarantee;
 
     @Column(nullable = false)
-    private boolean deprecated;
+    private Boolean deprecated;
 
     // в mappedBy ссылка на поле product в таблице Stock
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE,

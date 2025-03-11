@@ -1,17 +1,32 @@
 package com.crm.tehnomer.dtos.product;
 
-import jakarta.validation.constraints.Email;
+import java.math.BigDecimal;
+
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
-import lombok.NonNull;
 import lombok.Setter;
 
 @Getter
 @Setter
 public class ProductCreateDto {
 
-    private String info;
+    @NotBlank
+    private String name;
 
-    private String address;
+    @NotBlank
+    private String model;
+
+    @NotBlank
+    private String description;
+
+    @NotNull
+    private BigDecimal price;
+
+    @NotNull
+    private Integer guarantee;
+
+    @NotNull
+    private Boolean deprecated;
 
 }

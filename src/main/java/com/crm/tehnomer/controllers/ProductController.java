@@ -20,10 +20,14 @@ import com.crm.tehnomer.dtos.ResponseDto;
 import com.crm.tehnomer.dtos.order.OrderCreateDto;
 import com.crm.tehnomer.dtos.order.OrderGetDto;
 import com.crm.tehnomer.dtos.order.TakeRequestedOrderBySalerDto;
+import com.crm.tehnomer.dtos.product.ProductCreateDto;
+import com.crm.tehnomer.dtos.product.ProductGetDto;
+import com.crm.tehnomer.dtos.product.UpdateProductDto;
 import com.crm.tehnomer.entities.Order;
 import com.crm.tehnomer.entities.Product;
 import com.crm.tehnomer.entities.User;
 import com.crm.tehnomer.entities.enums.OrderStatus;
+import com.crm.tehnomer.mappers.product.ProductMapper;
 import com.crm.tehnomer.repositories.UserRepository;
 import com.crm.tehnomer.services.orderService.OrderService;
 import com.crm.tehnomer.services.productService.ProductService;
@@ -38,18 +42,24 @@ public class ProductController {
 
     private UserRepository userRepository;
     private ProductService productService;
+    private ProductMapper productMapper;
 
     @GetMapping("/filter")
-    public List<Product> getFilteredProducts(@RequestParam(required = false) String model,
+    public List<ProductGetDto> getFilteredProducts(@RequestParam(required = false) String model,
             @RequestParam(required = false) String description,
             @RequestParam(required = false) BigDecimal minPrice,
             @RequestParam(required = false) BigDecimal maxPrice,
             @RequestParam(required = false) Integer guarantee,
             @RequestParam(required = false) Boolean deprecated) {
-        return productService.getFilteredProducts(model, description, minPrice, maxPrice, guarantee, deprecated);
+
+        List<Product> products = productService.getFilteredProducts(model, description, minPrice, maxPrice, guarantee,
+                deprecated);
+        return productMapper.toDtoList(products);
+
     }
 
     // разобраться с mapper, по факту там логика как у меня в методах dto
+    // добавить фильтры и page в одном контроллере
 
     // @GetMapping("")
     // public Page<OrderGetDto> getRequestedProducts(
@@ -61,27 +71,20 @@ public class ProductController {
     // return OrderGetDto.toPageOrders(orders);
     // }
 
-    // @PostMapping("")
-    // public ResponseEntity<ResponseDto> createProduct(
-    // @Validated @RequestBody productDto orderCreateDto, Authentication auth) {
-    // User user = userRepository.findByUsername(auth.getName());
-    // orderService.createOrder(orderCreateDto, user);
-    // return ResponseEntity.ok(ResponseDto.toDto("Order created by " +
-    // user.getEmail()));
-    // }
+    @PostMapping("")
+    public ResponseEntity<ResponseDto> createProduct(
+            @Validated @RequestBody ProductCreateDto productCreateDto) {
+        productService.createProduct(productCreateDto);
+        return ResponseEntity.ok(ResponseDto.toDto("Product created"));
+    }
 
-    // @PatchMapping("/{id}")
-    // public ResponseEntity<ResponseDto>
-    // takeRequestedOrderBySaler(@PathVariable("id") Long id,
-    // @Validated @RequestBody TakeRequestedOrderBySalerDto
-    // takeRequestedOrderBySalerDto,
-    // Authentication auth) {
-    // User currentUser = userRepository.findByUsername(auth.getName());
-    // orderService.editOrderStatus(id, takeRequestedOrderBySalerDto, currentUser);
-
-    // return ResponseEntity.ok(ResponseDto.toDto("Request status changed to
-    // PROCESSING_BY_THE_SELLER_STATUS"));
-    // }
+    @PatchMapping("/{id}")
+    public ResponseEntity<ResponseDto> updateProduct(@PathVariable("id") Long id,
+            @Validated @RequestBody UpdateProductDto updateProductDto,
+            Authentication auth) {
+        User currentUser = userRepository.findByUsername(auth.getName());
+        productService.updateProduct(updateProductDto);
+    }
 
     // @DeleteMa("/{id}")
     // public ResponseEntity<ResponseDto>
