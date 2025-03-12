@@ -5,8 +5,6 @@ import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,13 +17,9 @@ import com.crm.tehnomer.dtos.order.TakeRequestedOrderBySalerDto;
 import com.crm.tehnomer.entities.Order;
 import com.crm.tehnomer.entities.User;
 import com.crm.tehnomer.entities.enums.OrderStatus;
-import com.crm.tehnomer.repositories.OrderRepository;
 import com.crm.tehnomer.repositories.UserRepository;
 import com.crm.tehnomer.services.orderService.OrderService;
 import com.crm.tehnomer.services.userService.UserService;
-import com.crm.tehnomer.settings.security.CustomUserDetails;
-import com.crm.tehnomer.settings.security.JwtUserDetailsService;
-// import com.crm.tehnomer.settings.security.UserService;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -57,12 +51,6 @@ public class OrderController {
         return ResponseEntity.ok(ResponseDto.toDto("Order created by " + user.getEmail()));
     }
 
-    /**
-     * Client create order (request for saler)
-     *
-     * @param OrderCreateByClientDto orderDto
-     * @return message
-     */
     @GetMapping("")
     public Page<OrderGetDto> getRequestedOrders(
             @RequestParam(defaultValue = "REQUEST_STATUS") OrderStatus status,

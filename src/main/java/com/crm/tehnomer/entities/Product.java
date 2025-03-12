@@ -41,10 +41,10 @@ public class Product {
     @Column(precision = 10, scale = 2, nullable = false)
     private BigDecimal price;
 
-    private int guarantee;
+    private Integer guarantee;
 
     @Column(nullable = false)
-    private boolean deprecated;
+    private Boolean deprecated;
 
     // в mappedBy ссылка на поле product в таблице Stock
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE,
