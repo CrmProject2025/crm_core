@@ -64,7 +64,12 @@ public class ProductController {
 
         return productService.getFilteredProductsWithPageable(model, description, minPrice, maxPrice,
                 guarantee, deprecated, pageable);
+    }
 
+    @GetMapping("/{id}")
+    public ProductGetDto getProduct(@PathVariable("id") Long id) {
+        Product product = productService.getProduct(id);
+        return productMapper.toDto(product);
     }
 
     @PostMapping("")

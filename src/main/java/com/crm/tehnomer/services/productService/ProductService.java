@@ -5,6 +5,9 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -54,6 +57,12 @@ public class ProductService {
         return productRepository.findAll(specification, pageable).map(productMapper::toDto);
     }
 
+    @Cacheable(value = "productCache", key = "#id")
+    public Product getProduct(Long id) {
+        System.out.println("Fetching from DB...");
+        return productRepository.findById(id).orElseThrow();
+    }
+
     public void createProduct(ProductCreateDto productCreateDto) {
         Product product = productMapper.toEntity(productCreateDto);
         productRepository.save(product);
@@ -61,12 +70,14 @@ public class ProductService {
         logger.info("Creating product with id: {}", product.getId());
     }
 
+    @CachePut(value = "productCache", key = "#product.id")
     public void updateProduct(Long id, UpdateProductDto updateProductDto) {
         Product product = productRepository.getReferenceById(id);
         productMapper.updateEntityFromDto(product, updateProductDto);
         productRepository.save(product);
     }
 
+    @CacheEvict(value = "productCache", key = "#id")
     public void deleteProduct(Long id) {
         Product product = productRepository.getReferenceById(id);
         productRepository.delete(product);
