@@ -11,6 +11,19 @@ import lombok.Setter;
 @Setter
 public class ProductCreateDto {
 
+    public ProductCreateDto(@NotBlank String name, @NotBlank String model, @NotBlank String description,
+            @NotNull BigDecimal price, @NotNull Integer guarantee, @NotNull Boolean deprecated) {
+        this.name = name;
+        this.model = model;
+        this.description = description;
+        this.price = price;
+        this.guarantee = guarantee;
+        this.deprecated = deprecated;
+    }
+
+    public ProductCreateDto() {
+    }
+
     @NotBlank
     private String name;
 
